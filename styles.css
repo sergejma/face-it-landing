@@ -294,6 +294,207 @@ button { font: inherit; cursor: pointer; }
   .hero-image { aspect-ratio: 4/5; max-height: 720px; }
 }
 
+/* ============ iPHONE MOCKUP ============ */
+.phone-mock {
+  --py: 0px;
+  --pr: -8deg;
+  width: 100%;
+  max-width: 290px;
+  margin-inline: auto;
+  perspective: 1400px;
+  transform: translate3d(0, var(--py), 0);
+  will-change: transform;
+}
+@media (min-width: 960px) {
+  .phone-mock { max-width: 330px; margin-left: auto; margin-right: 0; }
+}
+
+.phone-tilt {
+  transform-style: preserve-3d;
+  transform: rotateY(var(--pr)) rotateX(2deg);
+  transition: transform 0.5s var(--ease);
+}
+
+.phone-frame {
+  position: relative;
+  aspect-ratio: 9 / 17.5;
+  background: #0A0A0A;
+  border-radius: 38px;
+  padding: 8px;
+  box-shadow:
+    0 40px 90px -30px rgba(10, 8, 5, 0.55),
+    0 12px 36px -12px rgba(10, 8, 5, 0.25),
+    inset 0 0 0 1.5px #1f1c19,
+    inset 0 0 0 3px #0a0a0a;
+  animation: phone-float 7s ease-in-out infinite;
+}
+@keyframes phone-float {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(-10px); }
+}
+
+.phone-notch {
+  position: absolute;
+  top: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 34%;
+  height: 26px;
+  background: #000;
+  border-radius: 999px;
+  z-index: 3;
+}
+
+.phone-screen {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: #F2EEE5;
+  border-radius: 34px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  color: var(--ink);
+  font-size: 13px;
+  line-height: 1.4;
+}
+
+/* Status bar */
+.phone-statusbar {
+  height: 44px;
+  padding: 0 22px 0 26px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  padding-bottom: 4px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--ink);
+  flex-shrink: 0;
+}
+.sb-time { font-variant-numeric: tabular-nums; }
+.sb-icons { display: inline-flex; gap: 5px; align-items: center; }
+.sb-icons svg { display: block; }
+
+/* App bar */
+.phone-appbar {
+  height: 44px;
+  display: grid;
+  grid-template-columns: 36px 1fr 36px;
+  align-items: center;
+  padding: 0 14px;
+  flex-shrink: 0;
+}
+.appbar-back, .appbar-warn {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: #fff;
+  font-size: 14px;
+  color: var(--ink);
+  font-weight: 600;
+}
+.appbar-warn {
+  background: #E89B3A;
+  color: #fff;
+  font-weight: 800;
+}
+.appbar-title {
+  text-align: center;
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: -0.01em;
+}
+
+/* Chat */
+.phone-chat {
+  flex: 1;
+  padding: 10px 14px 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  overflow: hidden;
+}
+.chat-bubble {
+  max-width: 86%;
+  padding: 9px 12px;
+  border-radius: 16px;
+  font-size: 12.5px;
+  line-height: 1.45;
+  letter-spacing: -0.005em;
+}
+.chat-user {
+  align-self: flex-end;
+  background: #0A0A0A;
+  color: #FAF7F0;
+  border-bottom-right-radius: 5px;
+}
+.chat-ai {
+  align-self: flex-start;
+  background: #fff;
+  color: var(--ink);
+  border-bottom-left-radius: 5px;
+  box-shadow: 0 1px 0 rgba(0,0,0,0.04);
+}
+
+.chat-typing {
+  align-self: flex-start;
+  background: #fff;
+  border-radius: 16px 16px 16px 5px;
+  padding: 10px 12px;
+  display: inline-flex;
+  gap: 4px;
+  align-items: center;
+  box-shadow: 0 1px 0 rgba(0,0,0,0.04);
+}
+.chat-typing span {
+  width: 5px;
+  height: 5px;
+  background: #8A857F;
+  border-radius: 50%;
+  animation: typing-bounce 1.2s ease-in-out infinite;
+}
+.chat-typing span:nth-child(2) { animation-delay: 0.18s; }
+.chat-typing span:nth-child(3) { animation-delay: 0.36s; }
+@keyframes typing-bounce {
+  0%, 60%, 100% { transform: translateY(0); opacity: 0.4; }
+  30%           { transform: translateY(-4px); opacity: 1; }
+}
+
+/* Input bar */
+.phone-input {
+  margin: 0 12px 14px;
+  padding: 8px 14px;
+  background: #fff;
+  border-radius: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 12.5px;
+  color: var(--ink-faint);
+  box-shadow: 0 1px 0 rgba(0,0,0,0.04);
+}
+.input-send {
+  width: 22px;
+  height: 22px;
+  background: var(--ink);
+  color: #fff;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+/* Reduced-motion users get a static, untilted phone */
+@media (prefers-reduced-motion: reduce) {
+  .phone-tilt { transform: none !important; }
+  .phone-frame { animation: none; }
+  .chat-typing span { animation: none; }
+}
+
 /* ============ PAIN AGITATION ============ */
 .pain-stack {
   display: grid;
@@ -331,6 +532,78 @@ button { font: inherit; cursor: pointer; }
   background: rgba(0,0,0,0.025);
   border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
 }
+
+/* ============ COST OF AVOIDANCE ============ */
+.cost-intro {
+  text-align: left;
+  max-width: 60ch;
+  margin: 0 auto;
+}
+.cost-intro .lead { margin-bottom: 1.1rem; }
+.cost-intro .lead:last-child { margin-bottom: 0; }
+.cost-intro em {
+  font-style: italic;
+  color: var(--ink);
+  font-weight: 600;
+}
+
+.cost-stack {
+  display: grid;
+  gap: 1rem;
+  margin: 3rem 0 0;
+}
+@media (min-width: 720px) {
+  .cost-stack { grid-template-columns: repeat(2, 1fr); gap: 1.25rem; }
+}
+.cost-card {
+  background: var(--bg-card);
+  border: 1px solid var(--line-soft);
+  border-radius: var(--radius);
+  padding: clamp(1.5rem, 3.5vw, 2rem);
+  position: relative;
+  transition: transform 0.3s var(--ease), border-color 0.3s var(--ease);
+}
+.cost-card:hover {
+  transform: translateY(-2px);
+  border-color: var(--ink);
+}
+.cost-num {
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.22em;
+  color: var(--ink);
+  margin: 0 0 0.85rem;
+  display: inline-block;
+  padding: 0.3rem 0.55rem;
+  background: var(--bg-soft);
+  border-radius: 999px;
+}
+.cost-title {
+  font-size: 1.25rem;
+  font-weight: 800;
+  letter-spacing: -0.018em;
+  line-height: 1.18;
+  margin: 0 0 0.85rem;
+  color: var(--ink);
+}
+.cost-card p {
+  margin: 0;
+  color: var(--ink-2);
+  line-height: 1.55;
+  font-size: 1rem;
+}
+
+.cost-punch {
+  margin: 3.5rem auto 0;
+  text-align: center;
+  font-size: clamp(1.35rem, 3.4vw, 1.85rem);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  line-height: 1.3;
+  color: var(--ink-2);
+  max-width: 38ch;
+}
+.cost-punch strong { color: var(--ink); font-weight: 800; }
 
 /* ============ BIG IDEA (DARK) ============ */
 .big-idea {
