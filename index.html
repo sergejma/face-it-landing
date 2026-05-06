@@ -109,43 +109,18 @@
       </div>
 
       <div class="hero-visual reveal">
-        <div class="phone-mock" data-parallax aria-label="Face it App — Beispiel-Konversation">
+        <div class="phone-mock" data-parallax aria-label="Face it App im Einsatz">
           <div class="phone-tilt">
-            <div class="phone-frame">
-              <div class="phone-notch" aria-hidden="true"></div>
-              <div class="phone-screen">
-                <div class="phone-statusbar" aria-hidden="true">
-                  <span class="sb-time">23:47</span>
-                  <span class="sb-icons">
-                    <svg viewBox="0 0 18 12" width="18" height="12" fill="currentColor"><rect x="0" y="8" width="3" height="4" rx="0.5"/><rect x="5" y="5" width="3" height="7" rx="0.5"/><rect x="10" y="2" width="3" height="10" rx="0.5"/><rect x="15" y="0" width="3" height="12" rx="0.5"/></svg>
-                    <svg viewBox="0 0 16 12" width="16" height="12" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M1 6 a10 10 0 0 1 14 0"/><path d="M3.5 8 a7 7 0 0 1 9 0"/><path d="M6 10 a4 4 0 0 1 4 0"/></svg>
-                    <svg viewBox="0 0 26 12" width="26" height="12" fill="none" stroke="currentColor" stroke-width="1"><rect x="0.5" y="0.5" width="22" height="11" rx="2.5"/><rect x="2.5" y="2.5" width="18" height="7" rx="1" fill="currentColor"/><rect x="23.5" y="4" width="1.5" height="4" rx="0.5" fill="currentColor"/></svg>
-                  </span>
-                </div>
-
-                <div class="phone-appbar" aria-hidden="true">
-                  <span class="appbar-back">←</span>
-                  <span class="appbar-title">Face It</span>
-                  <span class="appbar-warn">!</span>
-                </div>
-
-                <div class="phone-chat">
-                  <div class="chat-bubble chat-user">
-                    Ich will ja. Aber ich hab Angst vor einer Panikattacke.
-                  </div>
-                  <div class="chat-bubble chat-ai">
-                    Dein Körper versucht dich durch die Panik zu warnen, weil du ihm beigebracht hast, dass diese harmlose Situation gefährlich ist (was sie nicht ist!). Genau diese Panik musst du aushalten, während du dein Leben lebst. So verlässt du die Komfortzone und hast die Chance zu wachsen. Wenn du vermeidest weil du die Panik fürchtest, dann wird deine Komfortzone immer kleiner! Möchtest du den Rest deines Lebens eingesperrt sein auf 2 qm Komfortzone? Dann mach weiter so. Wenn nicht, lass uns ins Detail gehen!
-                  </div>
-                  <div class="chat-typing" aria-label="schreibt">
-                    <span></span><span></span><span></span>
-                  </div>
-                </div>
-
-                <div class="phone-input" aria-hidden="true">
-                  <span class="input-placeholder">Antworten…</span>
-                  <span class="input-send">↑</span>
-                </div>
-              </div>
+            <div class="phone-frame phone-frame-video">
+              <video class="phone-video"
+                src="assets/hero-video.mp4"
+                autoplay
+                muted
+                loop
+                playsinline
+                preload="auto"
+                disablepictureinpicture
+                aria-label="Face it App Demo"></video>
             </div>
           </div>
         </div>
@@ -420,6 +395,27 @@
           <p>Sieh schwarz auf weiß, womit du wirklich kämpfst. Wann es passiert. Was es triggert. Wie sich's über Wochen entwickelt.</p>
           <p class="kicker">Niemand sonst sieht das. Du auch nicht — bis du es siehst.</p>
         </article>
+      </div>
+
+      <div class="screen-showcase reveal">
+        <figure class="screen-card">
+          <img src="assets/screen-chat.png" alt="Echtes Chat-Beispiel: Face it nimmt dich beim Wort." loading="lazy" />
+          <figcaption>
+            <strong>Chat.</strong> Echte Antwort. Kein Wohlfühl-Sprech.
+          </figcaption>
+        </figure>
+        <figure class="screen-card">
+          <img src="assets/screen-ladder.png" alt="Angstleiter — Schritt für Schritt aus der Vermeidung." loading="lazy" />
+          <figcaption>
+            <strong>Angstleiter.</strong> Eine Angst, fünf Schritte raus.
+          </figcaption>
+        </figure>
+        <figure class="screen-card">
+          <img src="assets/screen-reality.png" alt="Realitäts-Check — der Panik-Knopf." loading="lazy" />
+          <figcaption>
+            <strong>Realitäts-Check.</strong> Wenn alles bricht. Immer kostenlos.
+          </figcaption>
+        </figure>
       </div>
     </div>
   </section>

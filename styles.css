@@ -339,6 +339,19 @@ button { font: inherit; cursor: pointer; }
     inset 0 0 0 3px #0a0a0a;
   animation: phone-float 7s ease-in-out infinite;
 }
+
+/* Video variant — video fills frame, no synthetic notch (the recording has its own) */
+.phone-frame-video {
+  overflow: hidden;
+}
+.phone-video {
+  width: 100%;
+  height: 100%;
+  border-radius: 30px;
+  object-fit: cover;
+  display: block;
+  background: #F2EEE5;
+}
 @keyframes phone-float {
   0%, 100% { transform: translateY(0); }
   50%      { transform: translateY(-10px); }
@@ -814,6 +827,56 @@ button { font: inherit; cursor: pointer; }
   object-fit: cover;
   aspect-ratio: 9/19.5;
   box-shadow: 0 20px 50px -30px rgba(0,0,0,0.25);
+}
+
+/* Real app screenshot showcase */
+.screen-showcase {
+  margin-top: clamp(3rem, 6vw, 4.5rem);
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: 1fr;
+  justify-items: center;
+}
+@media (min-width: 768px) {
+  .screen-showcase { grid-template-columns: repeat(3, 1fr); gap: 2.25rem; }
+}
+.screen-card {
+  margin: 0;
+  text-align: center;
+  max-width: 280px;
+  width: 100%;
+}
+.screen-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 28px;
+  border: 1px solid var(--line-soft);
+  box-shadow:
+    0 30px 60px -30px rgba(0,0,0,0.35),
+    0 8px 20px -8px rgba(0,0,0,0.15);
+  margin: 0 auto 1.25rem;
+  display: block;
+  background: var(--bg-card);
+  transition: transform 0.4s var(--ease), box-shadow 0.4s var(--ease);
+}
+.screen-card:hover img {
+  transform: translateY(-6px);
+  box-shadow:
+    0 40px 80px -30px rgba(0,0,0,0.4),
+    0 10px 24px -8px rgba(0,0,0,0.2);
+}
+.screen-card figcaption {
+  font-size: var(--fs-small);
+  color: var(--ink-muted);
+  line-height: 1.5;
+}
+.screen-card figcaption strong {
+  display: block;
+  color: var(--ink);
+  font-weight: 800;
+  font-size: 1rem;
+  margin-bottom: 0.25rem;
+  letter-spacing: -0.01em;
 }
 
 /* ============ FOUNDER ============ */
