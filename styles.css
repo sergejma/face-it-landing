@@ -248,14 +248,19 @@ button { font: inherit; cursor: pointer; }
 .site-header {
   position: sticky;
   top: 0;
-  z-index: 50;
+  z-index: 100;
   background: rgba(242, 238, 229, 0.85);
   backdrop-filter: saturate(180%) blur(14px);
   -webkit-backdrop-filter: saturate(180%) blur(14px);
   border-bottom: 1px solid transparent;
-  transition: border-color 0.2s var(--ease);
+  transition: background 0.25s var(--ease), border-color 0.25s var(--ease), box-shadow 0.25s var(--ease);
+  transform: translateZ(0);
 }
-.site-header.is-scrolled { border-bottom-color: var(--line-soft); }
+.site-header.is-scrolled {
+  background: rgba(242, 238, 229, 0.97);
+  border-bottom-color: var(--line-soft);
+  box-shadow: 0 6px 20px -12px rgba(10, 8, 5, 0.18);
+}
 .header-inner {
   display: flex;
   align-items: center;
@@ -340,8 +345,9 @@ button { font: inherit; cursor: pointer; }
   animation: phone-float 7s ease-in-out infinite;
 }
 
-/* Video variant — video fills frame, no synthetic notch (the recording has its own) */
+/* Video variant — matches native iPhone screen ratio so nothing is cropped */
 .phone-frame-video {
+  aspect-ratio: 9 / 19.5;
   overflow: hidden;
 }
 .phone-video {
