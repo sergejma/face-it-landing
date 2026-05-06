@@ -74,13 +74,13 @@
     window.addEventListener('resize', onScroll);
   }
 
-  // Lightweight CTA click tracking hook (extend later with GA / Plausible / Meta)
+  // CTA click tracking — fires ClickedAppStoreButton on every CTA that links to the App Store
   document.querySelectorAll('[data-cta]').forEach((el) => {
     el.addEventListener('click', () => {
       const where = el.getAttribute('data-cta');
+      if (window.fbq) window.fbq('trackCustom', 'ClickedAppStoreButton', { location: where });
       if (window.plausible) window.plausible('CTA Click', { props: { location: where } });
       if (window.gtag) window.gtag('event', 'cta_click', { location: where });
-      if (window.fbq) window.fbq('track', 'Lead', { content_name: where });
     });
   });
 })();
