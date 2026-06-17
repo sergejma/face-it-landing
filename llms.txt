@@ -1,0 +1,49 @@
+# Face it — getfaceit.com
+
+> Face it ist ein KI-Coach (iOS) gegen Angst, Panik und Vermeidung. Anders als beruhigende Apps (Calm, Headspace) konfrontiert Face it: Vermeidung hält Angst aufrecht, Konfrontation/Exposition löst sie. Features: konfrontativer Chat-Coach (merkt sich Muster), tägliche Aufträge, Angstleiter (Angsthierarchie), Reality Check (Panik-Knopf, für immer kostenlos), Fear Profile. 3 Tage gratis, dann 9,99€/Monat oder 59,99€/Jahr. Kein Therapieersatz, kein Notdienst.
+
+## Ratgeber
+
+### Vermeidung & Konfrontation
+- [Vermeidungsverhalten durchbrechen: Warum Ausweichen die Angst füttert](https://getfaceit.com/vermeidung-konfrontation/): Je vorsichtiger du wirst, desto größer wird die Angst. Warum Vermeidung dein Problem füttert — und wie du den Teufelskreis mit Konfrontation durchbrichst.
+- [Angsthierarchie erstellen: das Beispiel zuerst, dann deine eigene](https://getfaceit.com/vermeidung-konfrontation/angsthierarchie-erstellen/): Deine Angsthierarchie ist die Leiter raus aus der Angst. Ein durchgerechnetes Beispiel, die 5 Schritte zum Selbstbauen — plus ein Tool, das sie sortiert.
+- [Angstleiter erstellen: Schritt für Schritt richtig formulieren](https://getfaceit.com/vermeidung-konfrontation/angstleiter-erstellen/): Eine Angstleiter wirkt nur, wenn die Sprossen stimmen: konkret, beobachtbar, kein Sprung über 2–3, keine versteckte Krücke. So baust du sie richtig.
+- [Konfrontationstherapie selbst machen: geht das?](https://getfaceit.com/vermeidung-konfrontation/konfrontationstherapie-selbst-machen/): Die ehrliche Antwort: Vieles der Exposition kannst du allein angehen — manches nicht. Wo die Grenze liegt und wie du sicher startest, Schritt für Schritt.
+- [Sicherheitsverhalten erkennen und abbauen: die getarnte Vermeidung](https://getfaceit.com/vermeidung-konfrontation/sicherheitsverhalten-abbauen/): Begleitperson, Notfalltablette, Platz am Ausgang: Diese Krücken füttern deine Angst. Typische Beispiele — und wie du sie einzeln abbaust.
+- [Warum Vermeidung die Angst schlimmer macht](https://getfaceit.com/vermeidung-konfrontation/warum-vermeidung-angst-verstaerkt/): Vermeidung beruhigt für Minuten und füttert die Angst für Wochen. Vier Gründe, warum Ausweichen den Mechanismus genau verkehrt herum dreht — klar erklärt.
+
+### Soforthilfe bei Panik
+- [Panikattacke stoppen: was im Moment wirklich hilft](https://getfaceit.com/soforthilfe/): Was du jetzt tun kannst, um eine Panikattacke auszuhalten — und die eine Wahrheit, die mehr beruhigt als jeder Trick: Sie endet von allein. Immer.
+- [4-7-8-Atmung bei Panik: Anleitung + die ehrliche Wahrheit](https://getfaceit.com/soforthilfe/4-7-8-atmung-panikattacke/): 4 ein, 7 halten, 8 aus — so geht die 4-7-8-Atmung in 30 Sekunden. Warum das lange Ausatmen beruhigt, häufige Fehler, und wann die Technik zur Falle wird.
+- [Die 5-4-3-2-1-Methode gegen Angst: Anleitung, Übung und die ehrliche Grenze](https://getfaceit.com/soforthilfe/5-4-3-2-1-methode-erdung/): 5 sehen, 4 fühlen, 3 hören, 2 riechen, 1 schmecken: So holt dich die 5-4-3-2-1-Methode aus der Panik-Welle. Schritt für Schritt, häufige Fehler — und was sie 
+- [Atemübungen gegen Panik: welche helfen — und welche Falle lauert](https://getfaceit.com/soforthilfe/atemuebung-gegen-panik/): Box-Atmung, 4-7-8, verlängertes Ausatmen — welche Atemübung bei Panik hilft, warum sie wirkt und ab wann sie deine Angst heimlich füttert. Ehrlich erklärt.
+- [Grounding-Übungen (Erdung) auf Deutsch: 6 Techniken, die im Moment helfen](https://getfaceit.com/soforthilfe/grounding-uebung-deutsch/): Sechs konkrete Grounding-Übungen auf Deutsch, die dich aus dem Gedankenkarussell zurück in den Körper holen — plus die ehrliche Grenze: Erdung hilft akut, hei
+- [Panikattacke in der Öffentlichkeit: was tun, wenn du das Gefühl hast, alle sehen es?](https://getfaceit.com/soforthilfe/panikattacke-in-der-oeffentlichkeit/): Mitten im Supermarkt, im Zug, auf der Straße — und das Gefühl, alle sehen es. Was im Moment hilft, warum du bleiben solltest statt zu fliehen, und die Wahrhei
+
+### Angst-Situationen
+- [Angst in bestimmten Situationen — und wie du sie zurückeroberst](https://getfaceit.com/situationen/): Supermarkt, Autobahn, Tunnel, Bahn — verschiedene Orte, ein Muster: „Ich komme hier nicht raus.“ Wie du die Situationen einzeln zurückeroberst, statt sie zu m
+- [Panikattacke auf der Arbeit: verstecken oder bewältigen?](https://getfaceit.com/situationen/arbeit-meeting/): Unauffällige Soforthilfe im Meeting, die Falle des Versteckens und der ehrliche Weg raus — krankmelden oder hingehen? Konkret, ohne Beschönigen.
+- [Angst auf der Autobahn überwinden](https://getfaceit.com/situationen/autobahn-angst/): Die Angst, auf der Autobahn nicht mehr rauszukommen — Brücke, Tunnel, Stau, mittlere Spur. Wie du sie in kleinen Schritten überwindest, statt sie zu füttern.
+- [Panikattacke beim Autofahren: was im Moment hilft — und wie du zurück ans Steuer kommst](https://getfaceit.com/situationen/autofahren/): Panik am Steuer: Blick weit, weiteratmen, nicht panik-bremsen, sicher rechts ran. Warum Meiden die Angst füttert — und der Weg zurück ans Steuer.
+- [Panik, wenn du nicht weg kannst](https://getfaceit.com/situationen/kein-ausweg-panik/): Bahn, Friseur, Zahnarzt, Warteschlange — überall, wo du nicht raus kannst. Warum genau der Drang zu fliehen die Panik macht und wie du lernst zu bleiben.
+- [Panikattacke im Supermarkt an der Kasse](https://getfaceit.com/situationen/supermarkt-kasse/): Die Schlange an der Kasse ist Lehrbuch-Agoraphobie: „Ich kann jetzt nicht weg.“ Warum Bleiben die Angst schrumpfen lässt — und wie du den vollen Wagen nicht m
+- [Panik im Tunnel oder auf der Brücke: durchkommen und zurückerobern](https://getfaceit.com/situationen/tunnel-bruecke-angst/): Panikattacke im Tunnel oder auf der Brücke? Soforthilfe für die Durchfahrt, warum Umwege die Angst füttern und der schrittweise Weg zurück hinters Steuer.
+
+### Warum es nicht hilft
+- [Warum wird meine Angst immer schlimmer?](https://getfaceit.com/warum-funktioniert-nicht/): Du tust alles richtig — beruhigen, atmen, ablenken — und die Angst wächst trotzdem. Hier ist der Grund, den dir keiner sagt: Genau das füttert sie.
+- [Warum Ablenkung bei Panik nicht funktioniert](https://getfaceit.com/warum-funktioniert-nicht/ablenkung-bei-panik/): Ablenkung beendet die Panik scheinbar — und bringt sie morgen verlässlich zurück. Warum Wegschauen die Angst füttert und was wirklich hilft: hinspüren statt f
+- [Warum Atemübungen bei Panik oft nicht helfen](https://getfaceit.com/warum-funktioniert-nicht/atemuebungen-panik/): Atmen ist nicht nutzlos — aber als Notfall-Rettung bei jeder Panik wird es zur Falle. Warum es manchmal sogar schadet, welche Fehler du machst, und wann es wi
+- [Warum Beruhigung deine Angst verschlimmert](https://getfaceit.com/warum-funktioniert-nicht/beruhigung-verschlimmert-angst/): Beruhigung lindert die Angst für Minuten — und füttert sie für Wochen. Wie der Rückversicherungs-Kreislauf läuft und wo Beruhigen kippt.
+- [Wenn Entspannungsübungen die Angst schlimmer machen](https://getfaceit.com/warum-funktioniert-nicht/entspannung-macht-angst-schlimmer/): Tiefenentspannung kann Angst auslösen statt lösen — bei jedem Dritten bis Zweiten. Warum das passiert und was wirklich hilft, wenn Stille dich anspannt.
+- [Warum Gedankenstopp nicht funktioniert (und was wirklich hilft)](https://getfaceit.com/warum-funktioniert-nicht/gedankenstopp/): „Stopp!“ denken, Gummiband schnippen, den Gedanken wegdrücken — und er kommt stärker zurück. Warum Gedankenstopp scheitert und welcher Weg den Gedanken wirkli
+
+### Panikattacken-App
+- [Panikattacken-Apps: drei Typen, drei Versprechen — was wirklich zu dir passt](https://getfaceit.com/panikattacken-app/): Beruhigende App, DiGA auf Rezept oder konfrontativer KI-Coach? Die drei App-Typen gegen Panik ehrlich gegenübergestellt — inklusive, was für wen wirklich pass
+- [App statt Therapie bei Angst — sinnvoll oder nicht?](https://getfaceit.com/panikattacken-app/app-statt-therapie-sinnvoll/): Wann eine App bei Angst wirklich reicht und wann du eine Therapie brauchst — eine ehrliche Einordnung ohne Schwarz-Weiß. Mit Vergleichstabelle App vs. Therapi
+- [Ein Chatbot bei Panikattacken — kann das wirklich helfen?](https://getfaceit.com/panikattacken-app/chatbot-bei-panikattacken/): Kann ein Chatbot bei Panik wirklich helfen? Die ehrliche Antwort: was eine KI gut kann, wo ihre Grenzen sind — und warum Beruhigen nicht reicht.
+- [Kein Therapieplatz? Was du in der Wartezeit wirklich tun kannst](https://getfaceit.com/panikattacken-app/kein-therapieplatz-was-tun/): 3 bis 9 Monate Warteliste — und du sollst „durchhalten“? Was du in der Wartezeit selbst tun kannst und wie du in Deutschland schneller an einen Platz kommst.
+- [KI-Coach gegen Angst: warum konfrontieren wirkt und beruhigen nicht](https://getfaceit.com/panikattacken-app/ki-coach-gegen-angst/): Fast jede KI gegen Angst beruhigt dich — und füttert damit das Problem. Face it ist die KI, die dich konfrontiert. Wie das funktioniert, was es kostet, wo die
+- [Kostenlose App gegen Panikattacken: was geht wirklich gratis?](https://getfaceit.com/panikattacken-app/kostenlose-app-gegen-panikattacken/): „Kostenlos“ heißt nicht „wirkungslos“. Was es bei Panikattacken gratis gibt — von der DiGA auf Kassenrezept bis zum Panik-Knopf, der für immer frei bleibt.
+
+## App
+- [Face it im App Store](https://apps.apple.com/de/app/face-it-dein-ki-coach/id6748347064)
