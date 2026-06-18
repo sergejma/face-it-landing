@@ -14,6 +14,25 @@
   onScroll();
   window.addEventListener('scroll', onScroll, { passive: true });
 
+  // Ratgeber-Mega-Menü (Desktop-Dropdown + mobiles Burger-Sheet)
+  const navToggles = document.querySelectorAll('[data-nav-toggle]');
+  const mega = document.getElementById('megaPanel');
+  if (header && mega && navToggles.length) {
+    const setNav = (open) => {
+      header.classList.toggle('nav-open', open);
+      navToggles.forEach((t) => t.setAttribute('aria-expanded', open ? 'true' : 'false'));
+    };
+    navToggles.forEach((t) => t.addEventListener('click', (e) => {
+      e.stopPropagation();
+      setNav(!header.classList.contains('nav-open'));
+    }));
+    document.addEventListener('click', (e) => {
+      if (header.classList.contains('nav-open') && !mega.contains(e.target) && !e.target.closest('[data-nav-toggle]')) setNav(false);
+    });
+    document.addEventListener('keydown', (e) => { if (e.key === 'Escape') setNav(false); });
+    mega.addEventListener('click', (e) => { if (e.target.closest('a')) setNav(false); });
+  }
+
   // Reveal-on-scroll
   const revealEls = document.querySelectorAll('.reveal');
   if ('IntersectionObserver' in window) {
