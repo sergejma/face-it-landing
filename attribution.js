@@ -83,5 +83,44 @@
 
   // Expose session ID for any in-page sign-up handlers (App Store CTA can
   // append it as a query param to a Universal Link).
-  window.__faceItSession = { sessionId, utm: stored };
+  // 4. Meta click/browser ids for the Conversions API (web → app handoff).
+  //    Read the cookies the Meta Pixel sets; if there's an fbclid in the URL
+  //    but no _fbc cookie yet, synthesize one in Meta's canonical format.
+  function readCookie(name) {
+    const m = document.cookie.match('(^|;)\\s*' + name + '\\s*=\\s*([^;]+)');
+    return m ? decodeURIComponent(m.pop()) : null;
+  }
+  let fbc = readCookie('_fbc');
+  const fbp = readCookie('_fbp');
+  const fbclid = params.get('fbclid');
+  if (!fbc && fbclid) {
+    fbc = `fb.1.${Date.now()}.${fbclid}`;
+  }
+
+  // 5. Decorate every App Store CTA with the ids so the iOS app can capture
+  //    them (AttributionService reads fi_session / fbc / fbp from the opened
+  //    URL). Best-effort: only survives the Safari → universal-link path, not
+  //    the App Store interstitial — so treat it as a bonus for the web cohort.
+  function decorateAppStoreLinks() {
+    const extra = { fi_session: sessionId };
+    if (fbc) extra.fbc = fbc;
+    if (fbp) extra.fbp = fbp;
+    document.querySelectorAll('a[href*="apps.apple.com"]').forEach((a) => {
+      try {
+        const url = new URL(a.href);
+        for (const [k, v] of Object.entries(extra)) {
+          if (!url.searchParams.has(k)) url.searchParams.set(k, v);
+        }
+        a.href = url.toString();
+      } catch (_e) { /* leave the link untouched on any parse error */ }
+    });
+  }
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', decorateAppStoreLinks);
+  } else {
+    decorateAppStoreLinks();
+  }
+
+  // Expose for any in-page sign-up handlers.
+  window.__faceItSession = { sessionId, utm: stored, fbc, fbp };
 })();
