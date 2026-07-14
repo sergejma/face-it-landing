@@ -7,3 +7,7 @@ node_modules/
 
 # SEO working docs (not deployed)
 _seo/
+
+# Humanizer: Credentials + interne Configs niemals committen
+.env.local
+.claude/
