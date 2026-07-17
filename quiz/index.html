@@ -5,12 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <meta name="theme-color" content="#F2EEE5" />
   <title>Dein persönlicher 4-Wochen-Plan gegen die Angst — Face it</title>
-  <meta name="description" content="Beantworte 6 kurze Fragen und erhalte einen persönlichen 4-Wochen-Plan gegen die Angst, die dich zurückhält. Kostenlos in 60 Sekunden." />
+  <meta name="description" content="Beantworte ein paar ehrliche Fragen und erhalte dein Vermeidungs-Level plus einen persönlichen 4-Wochen-Plan gegen die Angst, die dich zurückhält." />
   <link rel="canonical" href="https://getfaceit.com/quiz/" />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://getfaceit.com/quiz/" />
   <meta property="og:title" content="Was wäre, wenn du aufhörst auszuweichen?" />
-  <meta property="og:description" content="6 Fragen. 60 Sekunden. Dein persönlicher 4-Wochen-Plan gegen die Angst, die dich zurückhält." />
+  <meta property="og:description" content="Der ehrliche Selbst-Check: dein Vermeidungs-Level + dein persönlicher 4-Wochen-Plan." />
   <meta property="og:image" content="https://getfaceit.com/assets/gallery-chat.jpg" />
   <meta property="og:locale" content="de_DE" />
 
@@ -90,30 +90,41 @@
     @keyframes qzIn { from { opacity: 0; transform: translateX(14px); } to { opacity: 1; transform: none; } }
 
     .qz-kicker { font-size: 13px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--gold); margin: 0 0 10px; }
-    .qz-h1 { font-size: clamp(26px, 6vw, 34px); line-height: 1.15; font-weight: 900; color: var(--ink); margin: 0 0 10px; }
-    .qz-sub { font-size: 16px; line-height: 1.5; color: var(--ink-muted); margin: 0 0 26px; }
+    .qz-h1 { font-size: clamp(25px, 6vw, 33px); line-height: 1.16; font-weight: 900; color: var(--ink); margin: 0 0 10px; }
+    .qz-sub { font-size: 15.5px; line-height: 1.5; color: var(--ink-muted); margin: 0 0 8px; }
+    /* Die Mikro-Begründung: warum wir das fragen — macht aus Abfrage Diagnostik */
+    .qz-why { font-size: 13.5px; line-height: 1.5; color: var(--ink-faint); margin: 0 0 22px; }
 
     .qz-options { display: flex; flex-direction: column; gap: 10px; }
     .qz-opt {
+      position: relative;
       display: flex; flex-direction: column; align-items: flex-start; gap: 2px;
       width: 100%; text-align: left; cursor: pointer;
       background: var(--bg-card); border: 1.5px solid var(--line);
-      border-radius: 16px; padding: 15px 18px;
+      border-radius: 16px; padding: 15px 52px 15px 18px;
       font: inherit; color: var(--ink);
       transition: transform .12s ease, border-color .15s, background .15s;
     }
     .qz-opt:active { transform: scale(.985); }
-    .qz-opt.is-selected { border-color: var(--ink); background: #fff; }
     .qz-opt b { font-size: 16.5px; font-weight: 700; }
     .qz-opt span { font-size: 13.5px; color: var(--ink-muted); }
-    .qz-opt .qz-check { margin-left: auto; }
-
-    .qz-opt.qz-multi { flex-direction: row; align-items: center; }
-    .qz-opt.qz-multi::after {
-      content: ""; margin-left: auto; width: 22px; height: 22px; flex: 0 0 22px;
-      border: 2px solid var(--line); border-radius: 7px;
-      transition: background .15s, border-color .15s;
+    /* Bestätigungs-Beat: Häkchen erscheint, kurze Pause, DANN geht es weiter */
+    .qz-opt::after {
+      content: ""; position: absolute; right: 16px; top: 50%; transform: translateY(-50%) scale(.6);
+      width: 24px; height: 24px; border-radius: 999px;
+      background: var(--line-soft); opacity: .9;
+      transition: background .15s, transform .18s ease;
     }
+    .qz-opt.is-selected { border-color: var(--ink); background: #fff; }
+    .qz-opt.is-selected::after {
+      transform: translateY(-50%) scale(1);
+      background: #4CAF50 center/13px no-repeat
+        url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>');
+    }
+    .qz-opt.qz-compact { padding-top: 12px; padding-bottom: 12px; }
+    .qz-opt.qz-compact b { font-size: 15.5px; }
+
+    .qz-opt.qz-multi::after { border-radius: 7px; background: var(--bg-card); border: 2px solid var(--line); width: 20px; height: 20px; }
     .qz-opt.qz-multi.is-selected::after {
       background: var(--ink) center/13px no-repeat
         url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="%23FAF7F0" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>');
@@ -139,6 +150,17 @@
     .qz-cta[disabled] { opacity: .45; cursor: default; }
     .qz-cta--gold { background: var(--gold); color: var(--bg-dark); }
 
+    .qz-consent { text-align: center; font-size: 12px; color: var(--ink-faint); margin-top: 12px; }
+    .qz-consent a { color: var(--ink-muted); }
+
+    /* Statement-Screens */
+    .qz-quote {
+      font-size: clamp(22px, 5.4vw, 28px); line-height: 1.25; font-weight: 900;
+      color: var(--ink); margin: 0 0 8px;
+    }
+    .qz-quote::before { content: "„"; color: var(--gold); }
+    .qz-quote::after { content: "“"; color: var(--gold); }
+
     /* Building */
     .qz-build { text-align: center; }
     .qz-build-row {
@@ -157,8 +179,35 @@
       background: var(--gold) center/12px no-repeat
         url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="%230D0C0B" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>');
     }
+    .qz-method {
+      background: var(--bg-dark); color: var(--light-muted); border-radius: 16px;
+      padding: 16px 18px; font-size: 14px; line-height: 1.6; margin-top: 18px; text-align: left;
+    }
+    .qz-method b { color: var(--light); }
 
-    /* Reveal */
+    /* Diagnose */
+    .qz-meter-card, .qz-curve-card {
+      background: var(--bg-card); border: 1.5px solid var(--line); border-radius: 20px;
+      padding: 18px 20px; margin-top: 14px;
+    }
+    .qz-meter-head { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 10px; }
+    .qz-meter-head b { font-size: 15px; color: var(--ink); }
+    .qz-meter-head span { font-size: 22px; font-weight: 900; color: var(--warn); }
+    .qz-meter { position: relative; height: 10px; border-radius: 999px; overflow: hidden;
+      background: linear-gradient(90deg, #7fb069 0%, var(--gold) 55%, var(--warn) 100%); }
+    .qz-meter i { position: absolute; top: 50%; transform: translate(-50%, -50%);
+      width: 20px; height: 20px; border-radius: 999px; background: #fff;
+      border: 3px solid var(--ink); box-shadow: 0 1px 4px rgba(0,0,0,.25); }
+    .qz-meter-labels { display: flex; justify-content: space-between; font-size: 11.5px; color: var(--ink-faint); margin-top: 6px; }
+    .qz-curve-card h3 { margin: 0 0 4px; font-size: 15px; color: var(--ink); }
+    .qz-curve-card p { margin: 0 0 8px; font-size: 13px; color: var(--ink-muted); }
+    .qz-insight {
+      background: var(--bg-dark); color: var(--light); border-radius: 16px;
+      padding: 16px 18px; font-size: 15px; line-height: 1.55; margin-top: 14px;
+    }
+    .qz-insight b { color: var(--gold); }
+
+    /* Plan */
     .qz-plan-card {
       background: var(--bg-card); border: 1.5px solid var(--line); border-radius: 20px;
       padding: 20px; margin-top: 18px;
@@ -173,13 +222,11 @@
     }
     .qz-week b { display: block; font-size: 15.5px; color: var(--ink); }
     .qz-week span { font-size: 13.5px; line-height: 1.45; color: var(--ink-muted); }
-    .qz-insight {
-      background: var(--bg-dark); color: var(--light); border-radius: 16px;
-      padding: 16px 18px; font-size: 15px; line-height: 1.55; margin-top: 18px;
-    }
-    .qz-insight b { color: var(--gold); }
     .qz-smallprint { text-align: center; font-size: 12.5px; color: var(--ink-faint); margin-top: 12px; }
-    .qz-trust { display: flex; justify-content: center; gap: 18px; margin-top: 16px; font-size: 12.5px; color: var(--ink-faint); }
+    .qz-trust-list { margin: 18px 0 0; padding: 0; list-style: none; }
+    .qz-trust-list li { font-size: 15px; color: var(--ink-2); padding: 8px 0; border-bottom: 1px solid var(--line-soft); }
+    .qz-trust-list li:last-child { border-bottom: none; }
+    .qz-legal { font-size: 12.5px; line-height: 1.55; color: var(--ink-faint); margin-top: 18px; }
   </style>
 </head>
 <body>
@@ -196,7 +243,7 @@
   (() => {
     'use strict';
 
-    // ——— Quiz data (identisch zum App-Onboarding) ———
+    // ——— Quiz data (Basis-Fragen identisch zum App-Onboarding) ———
     const FOCUS_AREAS = [
       { id: 'Social confidence',  name: 'Soziales Selbstvertrauen', sub: 'Zeig dich und sprich aus',            fear: 'Angst vor Ablehnung' },
       { id: 'Procrastination',    name: 'Prokrastination',          sub: 'Starte ohne perfekte Bedingungen',    fear: 'Angst zu versagen' },
@@ -206,16 +253,16 @@
       { id: 'Career and purpose', name: 'Karriere & Berufung',      sub: 'Wage größere Schritte',               fear: 'Angst vor Bewertung im Job' },
     ];
     const FREQUENCY = [
-      { id: 'daily',          label: 'Jeden Tag',                 note: 'jeden Tag' },
-      { id: 'fewTimesAWeek',  label: 'Ein paar Mal pro Woche',    note: 'mehrmals pro Woche' },
-      { id: 'weekly',         label: 'Etwa einmal pro Woche',     note: 'etwa einmal pro Woche' },
-      { id: 'rarely',         label: 'Selten — aber dann zählt es', note: 'selten — aber in den Momenten, die zählen' },
+      { id: 'daily',          label: 'Jeden Tag',                   note: 'jeden Tag', score: 3 },
+      { id: 'fewTimesAWeek',  label: 'Ein paar Mal pro Woche',      note: 'mehrmals pro Woche', score: 2 },
+      { id: 'weekly',         label: 'Etwa einmal pro Woche',       note: 'etwa einmal pro Woche', score: 1 },
+      { id: 'rarely',         label: 'Selten — aber dann zählt es', note: 'selten — aber in den Momenten, die zählen', score: 1 },
     ];
     const INTENSITY = [
-      { id: 'mild',         label: 'Leicht — Hintergrundrauschen' },
-      { id: 'noticeable',   label: 'Spürbar — ich zögere' },
-      { id: 'strong',       label: 'Stark — meistens ziehe ich zurück' },
-      { id: 'overwhelming', label: 'Überwältigend — ich mache dicht' },
+      { id: 'mild',         label: 'Leicht — Hintergrundrauschen', score: 0 },
+      { id: 'noticeable',   label: 'Spürbar — ich zögere', score: 1 },
+      { id: 'strong',       label: 'Stark — meistens ziehe ich zurück', score: 2 },
+      { id: 'overwhelming', label: 'Überwältigend — ich mache dicht', score: 3 },
     ];
     const COSTS = [
       { id: 'opportunities', label: 'Chancen' },
@@ -230,17 +277,34 @@
       { id: 'severalYears',  label: 'Mehrere Jahre' },
       { id: 'always',        label: 'Solange ich denken kann' },
     ];
+    // Ich-Statements: der Selbst-Identifikations-Block. Jede Zustimmung macht
+    // das Muster sichtbarer — und liefert den Score für die Diagnose.
+    const STATEMENTS = [
+      'Ich sage Dinge ab, obwohl ich eigentlich hinwill',
+      'Kurz vorher finde ich immer einen Grund, warum es gerade nicht passt',
+      'Nach dem Ausweichen bin ich kurz erleichtert — und dann enttäuscht von mir',
+      'Ich plane mein Leben um die Angst herum, ohne es so zu nennen',
+      'Ich weiß genau, was ich tun müsste — ich tue es nur nicht',
+    ];
+    const AGREE = [
+      { label: 'Nein, gar nicht', score: 0 },
+      { label: 'Eher nein', score: 1 },
+      { label: 'Teils, teils', score: 2 },
+      { label: 'Eher ja', score: 3 },
+      { label: 'Ja. Genau ich.', score: 4 },
+    ];
     const WEEKS = [
-      { t: 'Das Muster sehen',        d: 'Tägliche Check-ins und dein erstes Coaching machen das Vermeiden sichtbar.' },
-      { t: 'Erste kleine Siege',      d: 'Ein kleiner Konfrontations-Schritt — wenig Risiko, echte Bewegung.' },
-      { t: 'Den Einsatz erhöhen',     d: 'Stell dich einer Sache, die du aufgeschoben hast. Mit Rückendeckung.' },
-      { t: 'Beweise es dir selbst',   d: 'Tu das, wofür du hergekommen bist.' },
+      { t: 'Das Muster sehen',      d: 'Tägliche Check-ins und dein erstes Coaching machen das Vermeiden sichtbar.' },
+      { t: 'Erste kleine Siege',    d: 'Ein kleiner Konfrontations-Schritt — wenig Risiko, echte Bewegung.' },
+      { t: 'Den Einsatz erhöhen',   d: 'Stell dich einer Sache, die du aufgeschoben hast. Mit Rückendeckung.' },
+      { t: 'Beweise es dir selbst', d: 'Tu das, wofür du hergekommen bist.' },
     ];
     const STORE_URL = 'https://apps.apple.com/de/app/face-it-dein-ki-coach/id6748347064';
 
     // ——— State ———
-    const answers = { focus: null, frequency: null, intensity: null, costs: [], duration: null, goal: '' };
-    // steps: 0 intro · 1–5 fragen · 6 ziel · 7 building · 8 reveal
+    const answers = { focus: null, frequency: null, intensity: null, costs: [], duration: null, statements: [], goal: '' };
+    // Steps: 0 intro · 1 q1 · 2 trust · 3 q2 · 4 q3 · 5 q4 · 6 q5 · 7–11 statements · 12 ziel · 13 building · 14 diagnose · 15 plan
+    const FIRST_Q = 1, LAST_Q = 12, TOTAL_Q = 11;
     let step = 0;
     let quizStartedFired = false;
 
@@ -254,12 +318,11 @@
       try { if (window.gtag) gtag('event', name, params || {}); } catch (_e) {}
     }
     function saveQuiz() {
-      try { localStorage.setItem('fi_quiz', JSON.stringify({ ...answers, ts: Date.now() })); } catch (_e) {}
+      try { localStorage.setItem('fi_quiz', JSON.stringify({ ...answers, level: level().label, ts: Date.now() })); } catch (_e) {}
     }
 
     // Antworten an den Server — der merkt sie sich (72 h) für dieses Netzwerk,
-    // damit die App beim ersten Start das Quiz überspringen kann und der Plan
-    // „einfach da“ ist. Keine Namen, keine E-Mail.
+    // damit die App beim ersten Start das Quiz überspringen kann. Keine Namen.
     function sendQuizToServer() {
       try {
         const s = window.__faceItSession || {};
@@ -286,179 +349,274 @@
       } catch (_e) { /* never break the page */ }
     }
 
+    // Vermeidungs-Level aus Statements (0–20) + Intensität (0–3) + Frequenz (1–3)
+    function level() {
+      const st = answers.statements.reduce((a, s) => a + (s ? s.score : 0), 0); // 0–20
+      const total = st + (answers.intensity ? answers.intensity.score * 2 : 0) + (answers.frequency ? answers.frequency.score : 0); // 0–29
+      const ten = Math.max(2, Math.min(10, Math.round(total / 29 * 10)));
+      if (ten >= 8) return { label: 'Sehr hoch', ten, pct: ten * 10 };
+      if (ten >= 5) return { label: 'Hoch', ten, pct: ten * 10 };
+      return { label: 'Spürbar', ten, pct: ten * 10 };
+    }
+
     // ——— Rendering ———
     function render() {
-      back.classList.toggle('is-visible', step > 0 && step < 7);
-      progress.classList.toggle('is-visible', step >= 1 && step <= 6);
-      progressBar.style.width = Math.min((step / 6) * 100, 100) + '%';
+      back.classList.toggle('is-visible', step >= FIRST_Q && step <= LAST_Q);
+      progress.classList.toggle('is-visible', step >= FIRST_Q && step <= LAST_Q);
+      const qIndex = Math.min(Math.max(step - FIRST_Q + (step > 2 ? 0 : 1), 1), TOTAL_Q); // trust zählt nicht
+      progressBar.style.width = Math.min(((step >= 3 ? step - 1 : step) / TOTAL_Q) * 100, 100) + '%';
       stage.innerHTML = '';
       const el = document.createElement('div');
       el.className = 'qz-step';
       stage.appendChild(el);
-      [intro, q1, q2, q3, q4, q5, q6, building, reveal][step](el);
+      STEPS[step](el);
       window.scrollTo(0, 0);
     }
 
-    function heading(el, kicker, title, sub) {
+    function heading(el, kicker, title, sub, why) {
       el.innerHTML += (kicker ? `<p class="qz-kicker">${kicker}</p>` : '') +
-        `<h1 class="qz-h1">${title}</h1>` + (sub ? `<p class="qz-sub">${sub}</p>` : '');
+        `<h1 class="qz-h1">${title}</h1>` +
+        (sub ? `<p class="qz-sub">${sub}</p>` : '') +
+        (why ? `<p class="qz-why">${why}</p>` : '');
     }
 
-    function singleChoice(el, items, withSub, onPick) {
+    // Auswahl mit Bestätigungs-Beat: Häkchen zeigen, 450 ms wirken lassen, weiter.
+    function singleChoice(el, items, opts, onPick) {
       const box = document.createElement('div');
       box.className = 'qz-options';
       items.forEach((item) => {
         const b = document.createElement('button');
         b.type = 'button';
-        b.className = 'qz-opt';
-        b.innerHTML = `<b>${withSub ? item.name : item.label}</b>` + (withSub ? `<span>${item.sub}</span>` : '');
+        b.className = 'qz-opt' + (opts.compact ? ' qz-compact' : '');
+        b.innerHTML = `<b>${opts.withSub ? item.name : item.label}</b>` + (opts.withSub ? `<span>${item.sub}</span>` : '');
         b.addEventListener('click', () => {
+          if (box.dataset.locked) return;
+          box.dataset.locked = '1';
           b.classList.add('is-selected');
           if (!quizStartedFired) { quizStartedFired = true; track('QuizStarted'); }
-          setTimeout(() => onPick(item), 220);
+          setTimeout(() => onPick(item), 450);
         });
         box.appendChild(b);
       });
       el.appendChild(box);
     }
 
-    function intro(el) {
-      heading(el, 'Der 60-Sekunden-Check',
-        'Was wäre, wenn du aufhörst auszuweichen?',
-        'Beantworte 6 kurze Fragen und erhalte einen persönlichen 4-Wochen-Plan gegen die Angst, die dich zurückhält.');
-      const cta = document.createElement('button');
-      cta.className = 'qz-cta';
-      cta.textContent = 'Los geht’s';
-      cta.addEventListener('click', () => { step = 1; render(); });
-      el.appendChild(cta);
-      const trust = document.createElement('div');
-      trust.className = 'qz-trust';
-      trust.innerHTML = '<span>✓ Kostenlos</span><span>✓ Anonym</span><span>✓ 60 Sekunden</span>';
-      el.appendChild(trust);
-    }
-
-    function q1(el) {
-      heading(el, 'Frage 1 von 6', 'Was hält dich am meisten zurück?', 'Wähle den Bereich, der gerade am meisten wehtut.');
-      singleChoice(el, FOCUS_AREAS, true, (item) => { answers.focus = item; step = 2; render(); });
-    }
-    function q2(el) {
-      heading(el, 'Frage 2 von 6', 'Wie oft redest du dir etwas aus?', 'Sei ehrlich — das bleibt unter uns.');
-      singleChoice(el, FREQUENCY, false, (item) => { answers.frequency = item; step = 3; render(); });
-    }
-    function q3(el) {
-      heading(el, 'Frage 3 von 6', 'Wie stark ist die Angst in diesen Momenten?', 'Es gibt keine falsche Antwort.');
-      singleChoice(el, INTENSITY, false, (item) => { answers.intensity = item; step = 4; render(); });
-    }
-    function q4(el) {
-      heading(el, 'Frage 4 von 6', 'Was hat dich das Vermeiden schon gekostet?', 'Wähle alles aus, was zutrifft.');
-      const box = document.createElement('div');
-      box.className = 'qz-options';
-      COSTS.forEach((item) => {
-        const b = document.createElement('button');
-        b.type = 'button';
-        b.className = 'qz-opt qz-multi';
-        b.innerHTML = `<b>${item.label}</b>`;
-        b.addEventListener('click', () => {
-          const i = answers.costs.findIndex((c) => c.id === item.id);
-          if (i >= 0) answers.costs.splice(i, 1); else answers.costs.push(item);
-          b.classList.toggle('is-selected');
-          cta.disabled = answers.costs.length === 0;
+    const STEPS = [
+      // 0 — Intro
+      (el) => {
+        heading(el, 'Der ehrliche Selbst-Check',
+          'Was wäre, wenn du aufhörst auszuweichen?',
+          'Ein paar ehrliche Fragen. Dann bekommst du dein Vermeidungs-Level — und einen persönlichen 4-Wochen-Plan gegen die Angst, die dich zurückhält.');
+        const cta = document.createElement('button');
+        cta.className = 'qz-cta';
+        cta.textContent = 'Los geht’s';
+        cta.addEventListener('click', () => { step = 1; render(); });
+        el.appendChild(cta);
+        el.insertAdjacentHTML('beforeend',
+          '<p class="qz-consent">✓ Kostenlos · ✓ Anonym · ✓ 2 Minuten<br/>Deine Antworten werden nur zur Plan-Erstellung verarbeitet · <a href="https://mindcom.io/privacy-policy" target="_blank" rel="noopener">Datenschutz</a></p>');
+      },
+      // 1 — Q1 Focus
+      (el) => {
+        heading(el, 'Frage 1', 'Was hält dich am meisten zurück?',
+          'Wähle den Bereich, der gerade am meisten wehtut.',
+          'Dein Plan wird auf genau diesen Bereich zugeschnitten.');
+        singleChoice(el, FOCUS_AREAS, { withSub: true }, (item) => { answers.focus = item; step = 2; render(); });
+      },
+      // 2 — Trust-Interstitial
+      (el) => {
+        heading(el, null, 'Gut, dass du hier bist.',
+          'Die nächsten Fragen sind ein Moment ehrlicher Selbstreflexion. Es gibt keine falschen Antworten — nur ein Muster, das sichtbar wird.');
+        el.insertAdjacentHTML('beforeend',
+          '<ul class="qz-trust-list">' +
+          '<li>🔍 Erst machen wir dein Vermeidungs-Muster sichtbar</li>' +
+          '<li>📊 Dann bekommst du dein persönliches Level</li>' +
+          '<li>🗓️ Und einen 4-Wochen-Plan, der genau dort ansetzt</li>' +
+          '</ul>');
+        const cta = document.createElement('button');
+        cta.className = 'qz-cta';
+        cta.textContent = 'Weiter';
+        cta.addEventListener('click', () => { step = 3; render(); });
+        el.appendChild(cta);
+        el.insertAdjacentHTML('beforeend',
+          '<p class="qz-legal">Face it ersetzt keine Therapie und keine professionelle Hilfe. Wenn du in einer akuten Krise bist, wende dich bitte an die Telefonseelsorge (0800&nbsp;111&nbsp;0&nbsp;111, kostenlos) oder den Notruf.</p>');
+      },
+      // 3 — Q2 Frequenz
+      (el) => {
+        heading(el, 'Frage 2', 'Wie oft redest du dir etwas aus?',
+          'Sei ehrlich — das bleibt unter uns.',
+          'Die Frequenz zeigt, wie tief das Muster sitzt.');
+        singleChoice(el, FREQUENCY, {}, (item) => { answers.frequency = item; step = 4; render(); });
+      },
+      // 4 — Q3 Intensität
+      (el) => {
+        heading(el, 'Frage 3', 'Wie stark ist die Angst in diesen Momenten?',
+          'Es gibt keine falsche Antwort.',
+          'Davon hängt ab, wie klein deine ersten Schritte sein müssen.');
+        singleChoice(el, INTENSITY, {}, (item) => { answers.intensity = item; step = 5; render(); });
+      },
+      // 5 — Q4 Kosten (multi)
+      (el) => {
+        heading(el, 'Frage 4', 'Was hat dich das Vermeiden schon gekostet?',
+          'Wähle alles aus, was zutrifft.',
+          'Was auf dem Spiel steht, wird Teil deines Warum.');
+        const box = document.createElement('div');
+        box.className = 'qz-options';
+        COSTS.forEach((item) => {
+          const b = document.createElement('button');
+          b.type = 'button';
+          b.className = 'qz-opt qz-multi qz-compact';
+          b.innerHTML = `<b>${item.label}</b>`;
+          b.addEventListener('click', () => {
+            const i = answers.costs.findIndex((c) => c.id === item.id);
+            if (i >= 0) answers.costs.splice(i, 1); else answers.costs.push(item);
+            b.classList.toggle('is-selected');
+            cta.disabled = answers.costs.length === 0;
+          });
+          box.appendChild(b);
         });
-        box.appendChild(b);
-      });
-      el.appendChild(box);
-      const cta = document.createElement('button');
-      cta.className = 'qz-cta';
-      cta.textContent = 'Weiter';
-      cta.disabled = true;
-      cta.addEventListener('click', () => { step = 5; render(); });
-      el.appendChild(cta);
-    }
-    function q5(el) {
-      heading(el, 'Frage 5 von 6', 'Wie lange läuft dieses Muster schon?', 'Die Laufzeit hilft uns, deinen Plan richtig zu takten.');
-      singleChoice(el, DURATION, false, (item) => { answers.duration = item; step = 6; render(); });
-    }
-    function q6(el) {
-      heading(el, 'Frage 6 von 6', 'Was würdest du tun, wenn die Angst dich nicht stoppen könnte?',
-        'Ein Satz reicht. Dein Plan arbeitet auf genau dieses Ziel hin.');
-      const ta = document.createElement('textarea');
-      ta.className = 'qz-textarea';
-      ta.maxLength = 200;
-      ta.placeholder = 'z. B. „Endlich im Meeting meine Meinung sagen“';
-      ta.addEventListener('input', () => { answers.goal = ta.value.trim(); });
-      el.appendChild(ta);
-      el.insertAdjacentHTML('beforeend', '<p class="qz-hint">Optional — du kannst es auch später mit deinem Coach herausarbeiten.</p>');
-      const cta = document.createElement('button');
-      cta.className = 'qz-cta';
-      cta.textContent = 'Meinen Plan erstellen';
-      cta.addEventListener('click', () => { step = 7; render(); });
-      el.appendChild(cta);
-    }
+        el.appendChild(box);
+        const cta = document.createElement('button');
+        cta.className = 'qz-cta';
+        cta.textContent = 'Weiter';
+        cta.disabled = true;
+        cta.addEventListener('click', () => { step = 6; render(); });
+        el.appendChild(cta);
+      },
+      // 6 — Q5 Dauer
+      (el) => {
+        heading(el, 'Frage 5', 'Wie lange läuft dieses Muster schon?',
+          null,
+          'Die Laufzeit hilft uns, deinen Plan richtig zu takten.');
+        singleChoice(el, DURATION, {}, (item) => { answers.duration = item; step = 7; render(); });
+      },
+      // 7–11 — Statements
+      ...STATEMENTS.map((text, idx) => (el) => {
+        heading(el, `Bist du das? · ${idx + 1} von ${STATEMENTS.length}`, '',
+          null, null);
+        el.querySelector('.qz-h1').outerHTML = `<p class="qz-quote">${text}</p><p class="qz-sub" style="margin-bottom:20px">Wie sehr trifft das auf dich zu?</p>`;
+        singleChoice(el, AGREE, { compact: true }, (item) => {
+          answers.statements[idx] = item;
+          step = 8 + idx; if (idx === STATEMENTS.length - 1) step = 12;
+          render();
+        });
+      }),
+      // 12 — Ziel
+      (el) => {
+        heading(el, 'Letzte Frage', 'Was würdest du tun, wenn die Angst dich nicht stoppen könnte?',
+          'Ein Satz reicht. Dein Plan arbeitet auf genau dieses Ziel hin.');
+        const ta = document.createElement('textarea');
+        ta.className = 'qz-textarea';
+        ta.maxLength = 200;
+        ta.placeholder = 'z. B. „Endlich im Meeting meine Meinung sagen“';
+        ta.addEventListener('input', () => { answers.goal = ta.value.trim(); });
+        el.appendChild(ta);
+        el.insertAdjacentHTML('beforeend', '<p class="qz-hint">Optional — du kannst es auch später mit deinem Coach herausarbeiten.</p>');
+        const cta = document.createElement('button');
+        cta.className = 'qz-cta';
+        cta.textContent = 'Mein Ergebnis berechnen';
+        cta.addEventListener('click', () => { step = 13; render(); });
+        el.appendChild(cta);
+      },
+      // 13 — Building
+      (el) => {
+        el.className += ' qz-build';
+        heading(el, null, 'Deine Auswertung läuft…', null);
+        const steps = ['Antworten analysieren', 'Vermeidungs-Level berechnen', 'Wochenschritte zusammenstellen'];
+        const rows = steps.map((s) => {
+          const r = document.createElement('div');
+          r.className = 'qz-build-row';
+          r.innerHTML = `<span class="qz-dot"></span>${s}`;
+          el.appendChild(r);
+          return r;
+        });
+        el.insertAdjacentHTML('beforeend',
+          '<div class="qz-method"><b>Warum das funktioniert:</b> Beruhigung löst Vermeidung nicht — sie verlängert sie. Dein Plan nutzt Konfrontation in kleinen Schritten: das Prinzip der Expositionstherapie, des Goldstandards gegen Vermeidungsverhalten.</div>');
+        rows.forEach((r, i) => {
+          setTimeout(() => r.classList.add('is-active'), 300 + i * 800);
+          setTimeout(() => r.classList.add('is-done'), 900 + i * 800);
+        });
+        setTimeout(() => {
+          saveQuiz();
+          sendQuizToServer();
+          track('QuizCompleted', { focus_area: answers.focus ? answers.focus.id : 'unknown', level: level().label });
+          step = 14; render();
+        }, 900 + steps.length * 800 + 500);
+      },
+      // 14 — Diagnose
+      (el) => {
+        const f = answers.focus || FOCUS_AREAS[0];
+        const lv = level();
+        heading(el, 'Dein Ergebnis', `Vermeidungs-Level: ${lv.label}`, `Kernangst: ${f.fear}`);
 
-    function building(el) {
-      el.className += ' qz-build';
-      heading(el, null, 'Dein Plan wird erstellt…', null);
-      const steps = ['Antworten analysieren', 'Wochenschritte zusammenstellen', 'Deinen Coach kalibrieren'];
-      const rows = steps.map((s) => {
-        const r = document.createElement('div');
-        r.className = 'qz-build-row';
-        r.innerHTML = `<span class="qz-dot"></span>${s}`;
-        el.appendChild(r);
-        return r;
-      });
-      rows.forEach((r, i) => {
-        setTimeout(() => r.classList.add('is-active'), 300 + i * 800);
-        setTimeout(() => r.classList.add('is-done'), 900 + i * 800);
-      });
-      setTimeout(() => {
-        saveQuiz();
-        sendQuizToServer();
-        track('QuizCompleted', { focus_area: answers.focus ? answers.focus.id : 'unknown' });
-        step = 8; render();
-      }, 900 + steps.length * 800 + 400);
-    }
+        el.insertAdjacentHTML('beforeend',
+          `<div class="qz-meter-card">
+            <div class="qz-meter-head"><b>Dein Level heute</b><span>${lv.ten}/10</span></div>
+            <div class="qz-meter"><i style="left:${lv.pct}%"></i></div>
+            <div class="qz-meter-labels"><span>frei</span><span>eingeengt</span></div>
+          </div>
+          <div class="qz-curve-card">
+            <h3>So kann es laufen</h3>
+            <p>Vermeidung sinkt nicht durch Warten — sondern durch kleine, machbare Schritte. Genau die bekommst du.</p>
+            <svg viewBox="0 0 320 130" width="100%" height="auto" role="img" aria-label="Kurve: Vermeidung sinkt über 4 Wochen">
+              <defs>
+                <linearGradient id="qzfade" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0" stop-color="#C9A961" stop-opacity=".28"/>
+                  <stop offset="1" stop-color="#C9A961" stop-opacity="0"/>
+                </linearGradient>
+              </defs>
+              <path d="M 24 28 C 110 34 150 82 296 100 L 296 122 L 24 122 Z" fill="url(#qzfade)"/>
+              <path d="M 24 28 C 110 34 150 82 296 100" fill="none" stroke="#0A0A0A" stroke-width="3" stroke-linecap="round"/>
+              <circle cx="24" cy="28" r="6" fill="#D45A2A"/>
+              <circle cx="296" cy="100" r="7" fill="#4CAF50"/>
+              <text x="24" y="16" font-size="12" font-weight="700" fill="#5A5754">Heute: ${lv.label.toLowerCase()}</text>
+              <text x="296" y="88" font-size="12" font-weight="700" fill="#2A2826" text-anchor="end">Woche 4: unter Kontrolle</text>
+            </svg>
+          </div>`);
 
-    function reveal(el) {
-      const f = answers.focus || FOCUS_AREAS[0];
-      heading(el, 'Dein Plan ist bereit',
-        `Dein 4-Wochen-Plan: ${f.name}`,
-        `Kernangst: ${f.fear}`);
+        const freqNote = answers.frequency ? answers.frequency.note : 'immer wieder';
+        const costList = answers.costs.length ? answers.costs.map((c) => c.label).join(', ') : 'mehr, als dir lieb ist';
+        el.insertAdjacentHTML('beforeend',
+          `<div class="qz-insight">Du redest es dir <b>${freqNote}</b> aus — und es kostet dich bereits: <b>${costList}</b>. Das ist kein Charakterfehler. Es ist ein Muster. Und Muster kann man umtrainieren.</div>`);
 
-      const card = document.createElement('div');
-      card.className = 'qz-plan-card';
-      card.innerHTML = WEEKS.map((w, i) => {
-        const detail = (i === 3 && answers.goal)
-          ? `Dein Ziel: „${answers.goal.replace(/</g, '&lt;')}“`
-          : w.d;
-        return `<div class="qz-week"><div class="qz-week-num">${i + 1}</div><div><b>${w.t}</b><span>${detail}</span></div></div>`;
-      }).join('');
-      el.appendChild(card);
+        const cta = document.createElement('button');
+        cta.className = 'qz-cta';
+        cta.textContent = 'Zeig mir meinen Plan';
+        cta.addEventListener('click', () => { step = 15; render(); });
+        el.appendChild(cta);
+      },
+      // 15 — Plan + Store-CTA
+      (el) => {
+        const f = answers.focus || FOCUS_AREAS[0];
+        heading(el, 'Dein Plan ist bereit', `Dein 4-Wochen-Plan: ${f.name}`, `Gegen: ${f.fear}`);
 
-      const freqNote = answers.frequency ? answers.frequency.note : 'immer wieder';
-      const costList = answers.costs.length
-        ? answers.costs.map((c) => c.label).join(', ')
-        : 'mehr, als dir lieb ist';
-      el.insertAdjacentHTML('beforeend',
-        `<div class="qz-insight">Du redest es dir <b>${freqNote}</b> aus — und es kostet dich bereits: <b>${costList}</b>. Beruhigung hat das nicht geändert. Konfrontation in kleinen Schritten schon.</div>`);
+        const card = document.createElement('div');
+        card.className = 'qz-plan-card';
+        card.innerHTML = WEEKS.map((w, i) => {
+          const detail = (i === 3 && answers.goal)
+            ? `Dein Ziel: „${answers.goal.replace(/</g, '&lt;')}“`
+            : w.d;
+          return `<div class="qz-week"><div class="qz-week-num">${i + 1}</div><div><b>${w.t}</b><span>${detail}</span></div></div>`;
+        }).join('');
+        el.appendChild(card);
 
-      const cta = document.createElement('a');
-      cta.className = 'qz-cta qz-cta--gold';
-      cta.textContent = 'Plan in der App starten — 3 Tage kostenlos';
-      cta.href = decoratedStoreURL();
-      cta.target = '_blank';
-      cta.rel = 'noopener';
-      cta.addEventListener('click', () => {
-        try { if (window.fbq) fbq('trackCustom', 'ClickedAppStoreButton', { source: 'quiz' }); } catch (_e) {}
-        try { if (window.gtag) gtag('event', 'quiz_store_click'); } catch (_e) {}
-      });
-      el.appendChild(cta);
-      el.insertAdjacentHTML('beforeend',
-        '<p class="qz-smallprint">Dein Coach kennt deinen Plan, sobald du die App öffnest.<br/>Nach dem Test 59,99 €/Jahr — jederzeit kündbar.</p>');
-    }
+        const cta = document.createElement('a');
+        cta.className = 'qz-cta qz-cta--gold';
+        cta.textContent = 'Plan in der App starten — 3 Tage kostenlos';
+        cta.href = decoratedStoreURL();
+        cta.target = '_blank';
+        cta.rel = 'noopener';
+        cta.addEventListener('click', () => {
+          try { if (window.fbq) fbq('trackCustom', 'ClickedAppStoreButton', { source: 'quiz' }); } catch (_e) {}
+          try { if (window.gtag) gtag('event', 'quiz_store_click'); } catch (_e) {}
+        });
+        el.appendChild(cta);
+        el.insertAdjacentHTML('beforeend',
+          '<p class="qz-smallprint">Dein Coach kennt deinen Plan, sobald du die App öffnest.<br/>Nach dem Test 59,99 €/Jahr — jederzeit kündbar.</p>');
+      },
+    ];
 
     // Session-/Meta-IDs an den Store-Link hängen (Universal-Link-Pfad) — die
-    // globale attribution.js dekoriert nur Links, die beim Laden existieren;
-    // dieser CTA entsteht erst nach dem Quiz.
+    // globale attribution.js dekoriert nur Links, die beim Laden existieren.
     function decoratedStoreURL() {
       try {
         const url = new URL(STORE_URL);
@@ -470,7 +628,12 @@
       } catch (_e) { return STORE_URL; }
     }
 
-    back.addEventListener('click', () => { if (step > 0 && step < 7) { step -= 1; render(); } });
+    back.addEventListener('click', () => {
+      if (step <= FIRST_Q || step > LAST_Q) return;
+      // trust-Screen beim Zurückgehen überspringen
+      step = step === 3 ? 1 : step - 1;
+      render();
+    });
     render();
   })();
   </script>
