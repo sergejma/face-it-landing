@@ -257,6 +257,35 @@
       try { localStorage.setItem('fi_quiz', JSON.stringify({ ...answers, ts: Date.now() })); } catch (_e) {}
     }
 
+    // Antworten an den Server — der merkt sie sich (72 h) für dieses Netzwerk,
+    // damit die App beim ersten Start das Quiz überspringen kann und der Plan
+    // „einfach da“ ist. Keine Namen, keine E-Mail.
+    function sendQuizToServer() {
+      try {
+        const s = window.__faceItSession || {};
+        fetch('https://europe-west1-face-it-app-ffc21.cloudfunctions.net/recordLandingVisit', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          keepalive: true,
+          body: JSON.stringify({
+            sessionId: s.sessionId || localStorage.getItem('fi_session_id') || ('qz-' + Math.random().toString(36).slice(2)),
+            fbc: s.fbc || null,
+            fbp: s.fbp || null,
+            landingPath: '/quiz/#completed',
+            userAgent: navigator.userAgent || null,
+            quiz: {
+              focus: answers.focus ? answers.focus.id : null,
+              frequency: answers.frequency ? answers.frequency.id : null,
+              intensity: answers.intensity ? answers.intensity.id : null,
+              costs: answers.costs.map((c) => c.id),
+              duration: answers.duration ? answers.duration.id : null,
+              goal: answers.goal || null,
+            },
+          }),
+        }).catch(() => { /* silent */ });
+      } catch (_e) { /* never break the page */ }
+    }
+
     // ——— Rendering ———
     function render() {
       back.classList.toggle('is-visible', step > 0 && step < 7);
@@ -383,6 +412,7 @@
       });
       setTimeout(() => {
         saveQuiz();
+        sendQuizToServer();
         track('QuizCompleted', { focus_area: answers.focus ? answers.focus.id : 'unknown' });
         step = 8; render();
       }, 900 + steps.length * 800 + 400);
