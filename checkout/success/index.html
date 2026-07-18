@@ -25,7 +25,19 @@
     'https://connect.facebook.net/en_US/fbevents.js');
     fbq('init', '1255438419689722');
     fbq('track', 'PageView');
-    fbq('trackCustom', 'WebTrialStarted');
+    // Browser-Seite des Trial-Starts mit derselben Event-ID wie das
+    // Server-Event aus dem Stripe-Webhook: Meta dedupliziert beide zu EINEM
+    // Event und kombiniert Browser-Cookies (fbp/fbc) mit Server-Identität (em).
+    (function () {
+      try {
+        var sid = new URLSearchParams(window.location.search).get('session_id');
+        if (sid) {
+          fbq('track', 'StartTrial', {}, { eventID: 'stripe:' + sid + ':start' });
+        } else {
+          fbq('trackCustom', 'WebTrialStarted');
+        }
+      } catch (e) { /* Tracking darf die Seite nie brechen */ }
+    })();
   </script>
 
   <style>
