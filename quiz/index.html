@@ -4,12 +4,12 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <meta name="theme-color" content="#F2EEE5" />
-  <title>Dein persönlicher 4-Wochen-Plan gegen die Angst — Face it</title>
+  <title>Dein persönlicher 4-Wochen-Plan gegen die Angst | Face it</title>
   <meta name="description" content="Beantworte ein paar ehrliche Fragen und erhalte dein Vermeidungs-Level plus einen persönlichen 4-Wochen-Plan gegen die Angst, die dich zurückhält." />
   <link rel="canonical" href="https://getfaceit.com/quiz/" />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://getfaceit.com/quiz/" />
-  <meta property="og:title" content="Was wäre, wenn du aufhörst auszuweichen?" />
+  <meta property="og:title" content="Was wäre, wenn du aufhörst, dein Leben von der Angst diktieren zu lassen?" />
   <meta property="og:description" content="Der ehrliche Selbst-Check: dein Vermeidungs-Level + dein persönlicher 4-Wochen-Plan." />
   <meta property="og:image" content="https://getfaceit.com/assets/gallery-chat.jpg" />
   <meta property="og:locale" content="de_DE" />
@@ -245,24 +245,24 @@
 
     // ——— Quiz data (Basis-Fragen identisch zum App-Onboarding) ———
     const FOCUS_AREAS = [
-      { id: 'Social confidence',  name: 'Soziales Selbstvertrauen', sub: 'Zeig dich und sprich aus',            fear: 'Angst vor Ablehnung' },
-      { id: 'Procrastination',    name: 'Prokrastination',          sub: 'Starte ohne perfekte Bedingungen',    fear: 'Angst zu versagen' },
-      { id: 'Self-doubt',         name: 'Selbstzweifel',            sub: 'Vertraue dir selbst unter Druck',     fear: 'Angst, nicht gut genug zu sein' },
-      { id: 'Relationships',      name: 'Beziehungen',              sub: 'Führe die schwierigen Gespräche',     fear: 'Angst vor Konflikt oder Verlassenwerden' },
-      { id: 'Health and body',    name: 'Gesundheit & Körper',      sub: 'Wähle Handlung statt Komfort',        fear: 'Angst vor Unbehagen' },
-      { id: 'Career and purpose', name: 'Karriere & Berufung',      sub: 'Wage größere Schritte',               fear: 'Angst vor Bewertung im Job' },
+      { id: 'Social confidence',  name: 'Soziale Situationen',  sub: 'Anrufe, Smalltalk, im Mittelpunkt stehen: Am liebsten würdest du dich unsichtbar machen', fear: 'Angst vor Ablehnung' },
+      { id: 'Procrastination',    name: 'Prokrastination',      sub: 'Du schiebst wichtige Dinge auf, bis der Druck unerträglich wird', fear: 'Angst zu versagen' },
+      { id: 'Self-doubt',         name: 'Selbstzweifel',        sub: 'Die Stimme im Kopf, die ständig sagt: „Das kannst du nicht“', fear: 'Angst, nicht gut genug zu sein' },
+      { id: 'Relationships',      name: 'Beziehungen',          sub: 'Konflikte, Nähe, schwierige Gespräche: Du schluckst lieber runter, statt es anzusprechen', fear: 'Angst vor Konflikt oder Verlassenwerden' },
+      { id: 'Health and body',    name: 'Gesundheit & Körper',  sub: 'Du weißt genau, was dir guttun würde, und drückst dich trotzdem davor', fear: 'Angst vor Unbehagen' },
+      { id: 'Career and purpose', name: 'Karriere & Berufung',  sub: 'Meetings, Gehaltsgespräche, sichtbar sein: Du bleibst unter deinen Möglichkeiten', fear: 'Angst vor Bewertung im Job' },
     ];
     const FREQUENCY = [
-      { id: 'daily',          label: 'Jeden Tag',                   note: 'jeden Tag', score: 3 },
-      { id: 'fewTimesAWeek',  label: 'Ein paar Mal pro Woche',      note: 'mehrmals pro Woche', score: 2 },
-      { id: 'weekly',         label: 'Etwa einmal pro Woche',       note: 'etwa einmal pro Woche', score: 1 },
-      { id: 'rarely',         label: 'Selten — aber dann zählt es', note: 'selten — aber in den Momenten, die zählen', score: 1 },
+      { id: 'daily',          label: 'Jeden Tag',                    note: 'jeden Tag', score: 3 },
+      { id: 'fewTimesAWeek',  label: 'Ein paar Mal pro Woche',       note: 'mehrmals pro Woche', score: 2 },
+      { id: 'weekly',         label: 'Etwa einmal pro Woche',        note: 'etwa einmal pro Woche', score: 1 },
+      { id: 'rarely',         label: 'Selten, aber dann zählt es',   note: 'selten, aber in den Momenten, die zählen', score: 1 },
     ];
     const INTENSITY = [
-      { id: 'mild',         label: 'Leicht — Hintergrundrauschen', score: 0 },
-      { id: 'noticeable',   label: 'Spürbar — ich zögere', score: 1 },
-      { id: 'strong',       label: 'Stark — meistens ziehe ich zurück', score: 2 },
-      { id: 'overwhelming', label: 'Überwältigend — ich mache dicht', score: 3 },
+      { id: 'mild',         label: 'Leicht: ein mulmiges Gefühl, mehr nicht', score: 0 },
+      { id: 'noticeable',   label: 'Spürbar: Ich zögere es raus, mache es aber meistens', score: 1 },
+      { id: 'strong',       label: 'Stark: Ich sage ab oder finde eine Ausrede', score: 2 },
+      { id: 'overwhelming', label: 'Überwältigend: Herzrasen, Blackout, ich blocke komplett', score: 3 },
     ];
     const COSTS = [
       { id: 'opportunities', label: 'Chancen' },
@@ -282,9 +282,9 @@
     const STATEMENTS = [
       'Ich sage Dinge ab, obwohl ich eigentlich hinwill',
       'Kurz vorher finde ich immer einen Grund, warum es gerade nicht passt',
-      'Nach dem Ausweichen bin ich kurz erleichtert — und dann enttäuscht von mir',
+      'Nach dem Vermeiden bin ich kurz erleichtert und danach enttäuscht von mir',
       'Ich plane mein Leben um die Angst herum, ohne es so zu nennen',
-      'Ich weiß genau, was ich tun müsste — ich tue es nur nicht',
+      'Ich weiß genau, was ich tun müsste. Ich tue es nur nicht',
     ];
     const AGREE = [
       { label: 'Nein, gar nicht', score: 0 },
@@ -295,7 +295,7 @@
     ];
     const WEEKS = [
       { t: 'Das Muster sehen',      d: 'Tägliche Check-ins und dein erstes Coaching machen das Vermeiden sichtbar.' },
-      { t: 'Erste kleine Siege',    d: 'Ein kleiner Konfrontations-Schritt — wenig Risiko, echte Bewegung.' },
+      { t: 'Erste kleine Siege',    d: 'Ein kleiner Konfrontations-Schritt: wenig Risiko, echte Bewegung.' },
       { t: 'Den Einsatz erhöhen',   d: 'Stell dich einer Sache, die du aufgeschoben hast. Mit Rückendeckung.' },
       { t: 'Beweise es dir selbst', d: 'Tu das, wofür du hergekommen bist.' },
     ];
@@ -405,8 +405,8 @@
       // 0 — Intro
       (el) => {
         heading(el, 'Der ehrliche Selbst-Check',
-          'Was wäre, wenn du aufhörst auszuweichen?',
-          'Ein paar ehrliche Fragen. Dann bekommst du dein Vermeidungs-Level — und einen persönlichen 4-Wochen-Plan gegen die Angst, die dich zurückhält.');
+          'Was wäre, wenn du aufhörst, dein Leben von der Angst diktieren zu lassen?',
+          'Ein paar ehrliche Fragen. Dann bekommst du dein Vermeidungs-Level und einen persönlichen 4-Wochen-Plan gegen die Angst, die dich zurückhält.');
         const cta = document.createElement('button');
         cta.className = 'qz-cta';
         cta.textContent = 'Los geht’s';
@@ -418,14 +418,14 @@
       // 1 — Q1 Focus
       (el) => {
         heading(el, 'Frage 1', 'Was hält dich am meisten zurück?',
-          'Wähle den Bereich, der gerade am meisten wehtut.',
+          'In welchem Bereich ist deine Angst am stärksten?',
           'Dein Plan wird auf genau diesen Bereich zugeschnitten.');
         singleChoice(el, FOCUS_AREAS, { withSub: true }, (item) => { answers.focus = item; step = 2; render(); });
       },
       // 2 — Trust-Interstitial
       (el) => {
         heading(el, null, 'Gut, dass du hier bist.',
-          'Die nächsten Fragen sind ein Moment ehrlicher Selbstreflexion. Es gibt keine falschen Antworten — nur ein Muster, das sichtbar wird.');
+          'Die nächsten Fragen sind ein Moment ehrlicher Selbstreflexion. Es gibt keine falschen Antworten. Nur ein Muster, das sichtbar wird.');
         el.insertAdjacentHTML('beforeend',
           '<ul class="qz-trust-list">' +
           '<li>🔍 Erst machen wir dein Vermeidungs-Muster sichtbar</li>' +
@@ -442,9 +442,9 @@
       },
       // 3 — Q2 Frequenz
       (el) => {
-        heading(el, 'Frage 2', 'Wie oft redest du dir etwas aus?',
-          'Sei ehrlich — das bleibt unter uns.',
-          'Die Frequenz zeigt, wie tief das Muster sitzt.');
+        heading(el, 'Frage 2', 'Wie oft vermeidest du bestimmte Situationen wegen deiner Angst?',
+          'Sei ehrlich. Das bleibt unter uns.',
+          'Die Häufigkeit zeigt, wie tief das Muster sitzt.');
         singleChoice(el, FREQUENCY, {}, (item) => { answers.frequency = item; step = 4; render(); });
       },
       // 4 — Q3 Intensität
@@ -484,8 +484,8 @@
       },
       // 6 — Q5 Dauer
       (el) => {
-        heading(el, 'Frage 5', 'Wie lange läuft dieses Muster schon?',
-          null,
+        heading(el, 'Frage 5', 'Wie lange läuft dieses Vermeidungsmuster schon?',
+          'Wie lange hat die Angst schon die Zügel in der Hand?',
           'Die Laufzeit hilft uns, deinen Plan richtig zu takten.');
         singleChoice(el, DURATION, {}, (item) => { answers.duration = item; step = 7; render(); });
       },
@@ -502,8 +502,8 @@
       }),
       // 12 — Ziel
       (el) => {
-        heading(el, 'Letzte Frage', 'Was würdest du tun, wenn die Angst dich nicht stoppen könnte?',
-          'Ein Satz reicht. Dein Plan arbeitet auf genau dieses Ziel hin.');
+        heading(el, 'Letzte Frage', 'Wenn die Angst nicht wäre: Was würdest du gerne machen?',
+          'Wie würde dein Leben dann aussehen? Ein Satz reicht. Dein Plan arbeitet auf genau dieses Ziel hin.');
         const ta = document.createElement('textarea');
         ta.className = 'qz-textarea';
         ta.maxLength = 200;
@@ -530,7 +530,7 @@
           return r;
         });
         el.insertAdjacentHTML('beforeend',
-          '<div class="qz-method"><b>Warum das funktioniert:</b> Beruhigung löst Vermeidung nicht — sie verlängert sie. Dein Plan nutzt Konfrontation in kleinen Schritten: das Prinzip der Expositionstherapie, des Goldstandards gegen Vermeidungsverhalten.</div>');
+          '<div class="qz-method"><b>Warum das funktioniert:</b> Beruhigung löst Vermeidung nicht, sie verlängert sie. Dein Plan nutzt Konfrontation in kleinen Schritten: das Prinzip der Expositionstherapie, des Goldstandards gegen Vermeidungsverhalten.</div>');
         rows.forEach((r, i) => {
           setTimeout(() => r.classList.add('is-active'), 300 + i * 800);
           setTimeout(() => r.classList.add('is-done'), 900 + i * 800);
@@ -556,7 +556,7 @@
           </div>
           <div class="qz-curve-card">
             <h3>So kann es laufen</h3>
-            <p>Vermeidung sinkt nicht durch Warten — sondern durch kleine, machbare Schritte. Genau die bekommst du.</p>
+            <p>Vermeidung sinkt nicht durch Warten, sondern durch kleine, machbare Schritte. Genau die bekommst du.</p>
             <svg viewBox="0 0 320 130" width="100%" height="auto" role="img" aria-label="Kurve: Vermeidung sinkt über 4 Wochen">
               <defs>
                 <linearGradient id="qzfade" x1="0" y1="0" x2="0" y2="1">
@@ -569,14 +569,14 @@
               <circle cx="24" cy="28" r="6" fill="#D45A2A"/>
               <circle cx="296" cy="100" r="7" fill="#4CAF50"/>
               <text x="24" y="16" font-size="12" font-weight="700" fill="#5A5754">Heute: ${lv.label.toLowerCase()}</text>
-              <text x="296" y="88" font-size="12" font-weight="700" fill="#2A2826" text-anchor="end">Woche 4: unter Kontrolle</text>
+              <text x="296" y="64" font-size="12" font-weight="700" fill="#2A2826" text-anchor="end">Woche 4: unter Kontrolle</text>
             </svg>
           </div>`);
 
         const freqNote = answers.frequency ? answers.frequency.note : 'immer wieder';
         const costList = answers.costs.length ? answers.costs.map((c) => c.label).join(', ') : 'mehr, als dir lieb ist';
         el.insertAdjacentHTML('beforeend',
-          `<div class="qz-insight">Du redest es dir <b>${freqNote}</b> aus — und es kostet dich bereits: <b>${costList}</b>. Das ist kein Charakterfehler. Es ist ein Muster. Und Muster kann man umtrainieren.</div>`);
+          `<div class="qz-insight">Du vermeidest <b>${freqNote}</b>. Und es kostet dich bereits: <b>${costList}</b>. Das ist kein Charakterfehler. Es ist ein Muster. Und Muster kann man umtrainieren.</div>`);
 
         const cta = document.createElement('button');
         cta.className = 'qz-cta';
@@ -601,17 +601,28 @@
 
         const cta = document.createElement('a');
         cta.className = 'qz-cta qz-cta--gold';
-        cta.textContent = 'Plan in der App starten — 3 Tage kostenlos';
-        cta.href = decoratedStoreURL();
-        cta.target = '_blank';
-        cta.rel = 'noopener';
+        cta.textContent = 'Plan freischalten: 3 Tage kostenlos testen';
+        cta.href = '/checkout/';
         cta.addEventListener('click', () => {
-          try { if (window.fbq) fbq('trackCustom', 'ClickedAppStoreButton', { source: 'quiz' }); } catch (_e) {}
-          try { if (window.gtag) gtag('event', 'quiz_store_click'); } catch (_e) {}
+          try { if (window.fbq) fbq('trackCustom', 'QuizToCheckout', { focus_area: answers.focus ? answers.focus.id : 'unknown' }); } catch (_e) {}
+          try { if (window.gtag) gtag('event', 'quiz_checkout_click'); } catch (_e) {}
         });
         el.appendChild(cta);
         el.insertAdjacentHTML('beforeend',
-          '<p class="qz-smallprint">Dein Coach kennt deinen Plan, sobald du die App öffnest.<br/>Nach dem Test 59,99 €/Jahr — jederzeit kündbar.</p>');
+          '<p class="qz-smallprint">Konto und Zahlung im Web, dann App laden und einloggen. Dein Coach kennt deinen Plan.<br/>Nach dem Test 59,99 €/Jahr oder 8,99 €/Monat. Jederzeit kündbar.</p>');
+
+        const storeAlt = document.createElement('a');
+        storeAlt.className = 'qz-smallprint';
+        storeAlt.style.display = 'block';
+        storeAlt.style.textDecoration = 'underline';
+        storeAlt.textContent = 'Oder erstmal nur die App laden';
+        storeAlt.href = decoratedStoreURL();
+        storeAlt.target = '_blank';
+        storeAlt.rel = 'noopener';
+        storeAlt.addEventListener('click', () => {
+          try { if (window.fbq) fbq('trackCustom', 'ClickedAppStoreButton', { source: 'quiz' }); } catch (_e) {}
+        });
+        el.appendChild(storeAlt);
       },
     ];
 
