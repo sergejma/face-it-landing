@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#F2EEE5" />
+  <title>Willkommen bei Face it! Premium</title>
+  <meta name="robots" content="noindex" />
+  <link rel="icon" type="image/png" href="/assets/app-icon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/styles.css" />
+
+  <!-- Meta Pixel (Browser-Seite der Purchase-Attribution; der Server sendet
+       parallel StartTrial/Subscribe via CAPI mit derselben Identität) -->
+  <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1255438419689722');
+    fbq('track', 'PageView');
+    fbq('trackCustom', 'WebTrialStarted');
+  </script>
+
+  <style>
+    .sc-wrap { min-height: 100dvh; display: flex; flex-direction: column; justify-content: center;
+      max-width: 480px; margin: 0 auto; padding: 24px 20px calc(28px + env(safe-area-inset-bottom));
+      box-sizing: border-box; text-align: center; }
+    .sc-emoji { font-size: 52px; margin-bottom: 10px; }
+    .sc-kicker { font-size: 13px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--gold); margin: 0 0 8px; }
+    .sc-h1 { font-size: clamp(26px, 6vw, 32px); line-height: 1.16; font-weight: 900; color: var(--ink); margin: 0 0 10px; }
+    .sc-sub { font-size: 15.5px; line-height: 1.55; color: var(--ink-muted); margin: 0 0 22px; }
+    .sc-steps { text-align: left; background: var(--bg-card); border: 1.5px solid var(--line);
+      border-radius: 20px; padding: 8px 20px; margin-bottom: 22px; }
+    .sc-step { display: flex; gap: 14px; align-items: flex-start; padding: 13px 0; border-bottom: 1px solid var(--line-soft); }
+    .sc-step:last-child { border-bottom: none; }
+    .sc-num { width: 30px; height: 30px; flex: 0 0 30px; border-radius: 999px; background: var(--ink);
+      color: var(--light); display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 14px; }
+    .sc-step b { display: block; font-size: 15px; color: var(--ink); }
+    .sc-step span { font-size: 13.5px; line-height: 1.5; color: var(--ink-muted); }
+    .sc-cta { display: block; width: 100%; box-sizing: border-box; text-align: center; background: var(--gold);
+      color: var(--bg-dark); border: none; cursor: pointer; border-radius: 999px; padding: 17px 24px;
+      font: inherit; font-size: 17px; font-weight: 800; text-decoration: none; }
+    .sc-small { font-size: 12.5px; color: var(--ink-faint); margin-top: 14px; line-height: 1.5; }
+  </style>
+</head>
+<body>
+  <div class="sc-wrap">
+    <div class="sc-emoji">🎉</div>
+    <p class="sc-kicker">Zahlung eingerichtet</p>
+    <h1 class="sc-h1">Willkommen bei Face it! Premium.</h1>
+    <p class="sc-sub">Dein Test läuft. So kommst du jetzt zu deinem Coach und deinem Plan:</p>
+
+    <div class="sc-steps">
+      <div class="sc-step">
+        <div class="sc-num">1</div>
+        <div><b>Lade die App</b><span>Face it! aus dem App Store — Button unten.</span></div>
+      </div>
+      <div class="sc-step">
+        <div class="sc-num">2</div>
+        <div><b>Melde dich mit derselben E-Mail an</b><span>Genau die E-Mail + das Passwort von gerade eben („Weiter mit E-Mail“).</span></div>
+      </div>
+      <div class="sc-step">
+        <div class="sc-num">3</div>
+        <div><b>Fertig — Premium ist aktiv</b><span>Dein Plan, dein Coach und alle Werkzeuge sind freigeschaltet.</span></div>
+      </div>
+    </div>
+
+    <a class="sc-cta" id="storeCta" href="https://apps.apple.com/de/app/face-it-dein-ki-coach/id6748347064" target="_blank" rel="noopener">Face it! im App Store laden</a>
+    <p class="sc-small">Bestätigung + Rechnung kommen per E-Mail von Stripe.<br/>Kündigen jederzeit über den Link in dieser E-Mail — auch während des Tests.</p>
+  </div>
+  <script src="/attribution.js" defer></script>
+</body>
+</html>

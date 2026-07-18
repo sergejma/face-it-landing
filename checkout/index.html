@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#F2EEE5" />
+  <title>Face it! Premium freischalten — sicher zahlen mit Stripe</title>
+  <meta name="description" content="Schalte deinen 4-Wochen-Plan und deinen KI-Coach frei. 3 Tage kostenlos testen, jederzeit kündbar." />
+  <meta name="robots" content="noindex" />
+  <link rel="canonical" href="https://getfaceit.com/checkout/" />
+  <link rel="icon" type="image/png" href="/assets/app-icon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/styles.css" />
+
+  <!-- Meta Pixel -->
+  <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1255438419689722');
+    fbq('track', 'PageView');
+    fbq('track', 'InitiateCheckout');
+  </script>
+
+  <style>
+    .ck-wrap { min-height: 100dvh; display: flex; flex-direction: column; max-width: 480px; margin: 0 auto;
+      padding: 16px 20px calc(28px + env(safe-area-inset-bottom)); box-sizing: border-box; }
+    .ck-top { display: flex; align-items: center; justify-content: space-between; padding: 8px 0 20px; }
+    .ck-logo { font-weight: 900; letter-spacing: .02em; font-size: 15px; color: var(--ink); text-decoration: none; }
+    .ck-secure { font-size: 12px; color: var(--ink-faint); }
+    .ck-kicker { font-size: 13px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--gold); margin: 0 0 8px; }
+    .ck-h1 { font-size: clamp(24px, 6vw, 30px); line-height: 1.18; font-weight: 900; color: var(--ink); margin: 0 0 6px; }
+    .ck-sub { font-size: 14.5px; line-height: 1.5; color: var(--ink-muted); margin: 0 0 18px; }
+
+    .ck-plans { display: flex; gap: 10px; margin-bottom: 18px; }
+    .ck-plan { flex: 1; position: relative; cursor: pointer; text-align: left;
+      background: var(--bg-card); border: 2px solid var(--line); border-radius: 16px; padding: 14px; font: inherit; }
+    .ck-plan.is-selected { border-color: var(--ink); background: #fff; }
+    .ck-plan b { display: block; font-size: 15px; color: var(--ink); }
+    .ck-plan .ck-price { font-size: 20px; font-weight: 900; color: var(--ink); }
+    .ck-plan .ck-per { font-size: 12px; color: var(--ink-muted); }
+    .ck-badge { position: absolute; top: -10px; left: 12px; background: var(--gold); color: var(--bg-dark);
+      font-size: 11px; font-weight: 800; padding: 3px 8px; border-radius: 999px; }
+
+    .ck-field { width: 100%; box-sizing: border-box; background: var(--bg-card); border: 1.5px solid var(--line);
+      border-radius: 14px; padding: 14px 16px; font: inherit; font-size: 16px; color: var(--ink); margin-bottom: 10px; }
+    .ck-field:focus { outline: none; border-color: var(--ink); }
+    .ck-cta { display: block; width: 100%; box-sizing: border-box; text-align: center; background: var(--ink);
+      color: var(--light); border: none; cursor: pointer; border-radius: 999px; padding: 16px 24px; margin-top: 8px;
+      font: inherit; font-size: 16.5px; font-weight: 800; }
+    .ck-cta[disabled] { opacity: .5; }
+    .ck-error { display: none; background: #fdecea; color: #8a2a1b; border-radius: 12px; padding: 12px 14px;
+      font-size: 13.5px; margin-top: 12px; }
+    .ck-error.is-visible { display: block; }
+    .ck-switch { text-align: center; font-size: 13.5px; color: var(--ink-muted); margin-top: 14px; }
+    .ck-switch a { color: var(--ink); font-weight: 700; cursor: pointer; }
+    .ck-legal { font-size: 12px; line-height: 1.55; color: var(--ink-faint); margin-top: 16px; text-align: center; }
+    .ck-legal a { color: var(--ink-muted); }
+    .ck-points { list-style: none; margin: 0 0 18px; padding: 0; }
+    .ck-points li { font-size: 13.5px; color: var(--ink-2); padding: 4px 0; }
+  </style>
+</head>
+<body>
+  <div class="ck-wrap">
+    <div class="ck-top">
+      <a class="ck-logo" href="/">FACE IT.</a>
+      <span class="ck-secure">🔒 Sichere Zahlung über Stripe</span>
+    </div>
+
+    <p class="ck-kicker">Letzter Schritt</p>
+    <h1 class="ck-h1">Schalte deinen Plan frei.</h1>
+    <p class="ck-sub">3 Tage kostenlos testen — dein Coach, dein 4-Wochen-Plan, alle Werkzeuge. Jederzeit kündbar.</p>
+
+    <ul class="ck-points">
+      <li>✓ Unbegrenztes KI-Coaching, das dich konfrontiert statt beruhigt</li>
+      <li>✓ Dein persönlicher 4-Wochen-Plan + Angst-Leitern</li>
+      <li>✓ SOS-Hilfe für schwere Momente</li>
+    </ul>
+
+    <div class="ck-plans" id="plans">
+      <button type="button" class="ck-plan is-selected" data-plan="yearly">
+        <span class="ck-badge">3 Tage kostenlos · spare 44 %</span>
+        <b>Jährlich</b>
+        <span class="ck-price">59,99 €</span>
+        <span class="ck-per">/Jahr — entspricht 5,00 €/Monat</span>
+      </button>
+      <button type="button" class="ck-plan" data-plan="monthly">
+        <b>Monatlich</b>
+        <span class="ck-price">8,99 €</span>
+        <span class="ck-per">/Monat, flexibel</span>
+      </button>
+    </div>
+
+    <form id="form">
+      <input class="ck-field" id="email" type="email" autocomplete="email" placeholder="E-Mail" required />
+      <input class="ck-field" id="password" type="password" autocomplete="new-password" placeholder="Passwort (min. 6 Zeichen)" minlength="6" required />
+      <button class="ck-cta" id="cta" type="submit">Weiter zur sicheren Zahlung</button>
+    </form>
+    <div class="ck-error" id="error"></div>
+    <p class="ck-switch" id="switchLine">Schon einen Face-it-Account? <a id="switchMode">Anmelden</a></p>
+
+    <p class="ck-legal">Dein Account funktioniert in der App und im Web. Nach dem Test verlängert sich das Abo automatisch zum gewählten Preis — kündbar jederzeit mit einem Klick in deiner Bestätigungs-E-Mail.<br/>
+    <a href="https://mindcom.io/privacy-policy" target="_blank" rel="noopener">Datenschutz</a> · <a href="/impressum.html">Impressum</a></p>
+  </div>
+
+  <script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-auth-compat.js"></script>
+  <script>
+  (() => {
+    'use strict';
+    firebase.initializeApp({
+      apiKey: 'AIzaSyCyWFxwwDe3WpxIEgMNo0L_20rPieKxoGQ',
+      authDomain: 'face-it-app-ffc21.firebaseapp.com',
+      projectId: 'face-it-app-ffc21',
+      appId: '1:98223224246:web:a0dfe5b23f94842c767d17',
+    });
+
+    const ENDPOINT = 'https://europe-west1-face-it-app-ffc21.cloudfunctions.net/createStripeCheckout';
+    let plan = 'yearly';
+    let mode = 'signup'; // 'signup' | 'signin'
+
+    const $ = (id) => document.getElementById(id);
+    const errBox = $('error');
+
+    document.querySelectorAll('.ck-plan').forEach((b) => {
+      b.addEventListener('click', () => {
+        document.querySelectorAll('.ck-plan').forEach((x) => x.classList.remove('is-selected'));
+        b.classList.add('is-selected');
+        plan = b.dataset.plan;
+      });
+    });
+
+    $('switchMode').addEventListener('click', () => {
+      mode = mode === 'signup' ? 'signin' : 'signup';
+      $('switchLine').firstChild.textContent = mode === 'signup' ? 'Schon einen Face-it-Account? ' : 'Noch keinen Account? ';
+      $('switchMode').textContent = mode === 'signup' ? 'Anmelden' : 'Registrieren';
+      $('password').autocomplete = mode === 'signup' ? 'new-password' : 'current-password';
+    });
+
+    function fail(msg) {
+      errBox.textContent = msg;
+      errBox.classList.add('is-visible');
+      $('cta').disabled = false;
+      $('cta').textContent = 'Weiter zur sicheren Zahlung';
+    }
+
+    function readCookie(name) {
+      const m = document.cookie.match('(^|;)\\s*' + name + '\\s*=\\s*([^;]+)');
+      return m ? decodeURIComponent(m.pop()) : null;
+    }
+
+    $('form').addEventListener('submit', async (e) => {
+      e.preventDefault();
+      errBox.classList.remove('is-visible');
+      $('cta').disabled = true;
+      $('cta').textContent = 'Einen Moment…';
+
+      const email = $('email').value.trim();
+      const password = $('password').value;
+      const auth = firebase.auth();
+
+      try {
+        try {
+          if (mode === 'signup') {
+            await auth.createUserWithEmailAndPassword(email, password);
+          } else {
+            await auth.signInWithEmailAndPassword(email, password);
+          }
+        } catch (err) {
+          // Registrierung mit bestehender E-Mail → nahtlos anmelden statt Sackgasse.
+          if (mode === 'signup' && err.code === 'auth/email-already-in-use') {
+            await auth.signInWithEmailAndPassword(email, password);
+          } else if (err.code === 'auth/wrong-password' || err.code === 'auth/invalid-credential') {
+            throw new Error('Falsches Passwort für diese E-Mail. Nutze „Anmelden“ oder ein anderes Passwort.');
+          } else if (err.code === 'auth/invalid-email') {
+            throw new Error('Diese E-Mail-Adresse sieht nicht gültig aus.');
+          } else if (err.code === 'auth/weak-password') {
+            throw new Error('Das Passwort ist zu schwach (mindestens 6 Zeichen).');
+          } else if (err.code === 'auth/user-not-found') {
+            throw new Error('Kein Account mit dieser E-Mail. Wechsle auf „Registrieren“.');
+          } else {
+            throw new Error('Anmeldung fehlgeschlagen: ' + (err.message || err.code || 'unbekannt'));
+          }
+        }
+
+        const idToken = await auth.currentUser.getIdToken();
+        const resp = await fetch(ENDPOINT, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            idToken,
+            plan,
+            fbc: readCookie('_fbc'),
+            fbp: readCookie('_fbp'),
+            sessionId: localStorage.getItem('fi_session_id') || null,
+          }),
+        });
+        const data = await resp.json().catch(() => ({}));
+        if (!resp.ok || !data.url) {
+          throw new Error(data.message || 'Die Zahlung konnte nicht gestartet werden. Bitte versuche es gleich noch einmal.');
+        }
+        window.location.href = data.url;
+      } catch (err) {
+        fail(err.message || 'Etwas ist schiefgelaufen. Bitte versuche es noch einmal.');
+      }
+    });
+  })();
+  </script>
+  <script src="/attribution.js" defer></script>
+</body>
+</html>
