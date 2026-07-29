@@ -7,9 +7,8 @@
 //     Universal Link / App Clip
 //  3. read the Meta Pixel cookies (_fbc/_fbp); if the URL carries an fbclid
 //     but the cookie isn't set yet, synthesize _fbc in Meta's canonical format
-//  4. decorate every App Store CTA with fi_session/fbc/fbp (runs on EVERY
-//     pageview — the ids only survive the universal-link path, not a fresh
-//     App Store install, so this is a bonus for the already-installed cohort)
+//  4. expose the ids on window.__faceItSession (App Store links stay clean —
+//     see the note at step 4 below: decorating them broke the store handoff)
 //  5. send a one-shot visit event to the recordLandingVisit Cloud Function,
 //     INCLUDING fbc/fbp — the server stores them keyed by IP so the
 //     subscription pipeline can match a later in-app purchase from the same
@@ -71,30 +70,15 @@
     return { fbc, fbp: readCookie('_fbp') };
   }
 
-  // 4. Decorate every App Store CTA — on every pageview, not just the first.
-  function decorateAppStoreLinks() {
-    const ids = metaIds();
-    const extra = { fi_session: sessionId };
-    if (ids.fbc) extra.fbc = ids.fbc;
-    if (ids.fbp) extra.fbp = ids.fbp;
-    document.querySelectorAll('a[href*="apps.apple.com"]').forEach((a) => {
-      try {
-        const url = new URL(a.href);
-        for (const [k, v] of Object.entries(extra)) {
-          if (!url.searchParams.has(k)) url.searchParams.set(k, v);
-        }
-        a.href = url.toString();
-      } catch (_e) { /* leave the link untouched on any parse error */ }
-    });
-    window.__faceItSession = { sessionId, utm: stored, fbc: ids.fbc, fbp: ids.fbp };
-  }
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', decorateAppStoreLinks);
-  } else {
-    decorateAppStoreLinks();
-  }
-  // Re-run once the Pixel has definitely set its cookies.
-  setTimeout(decorateAppStoreLinks, 1500);
+  // 4. App Store links stay UNTOUCHED. We used to append fi_session/fbc/fbp
+  //    to every apps.apple.com CTA — that was useless (query params on a
+  //    store URL never reach the app, neither on fresh install nor via the
+  //    installed app) and it BROKE the store handoff on iOS for every visitor
+  //    whose browser already carried Meta cookies: the App Store app rejected
+  //    the decorated URL as invalid and users bounced back to getfaceit.com.
+  //    Attribution runs entirely over the recordLandingVisit beacon below.
+  const ids0 = metaIds();
+  window.__faceItSession = { sessionId, utm: stored, fbc: ids0.fbc, fbp: ids0.fbp };
 
   // 5. Visit beacon. One send per session per UTM context; a second, enriched
   //    send goes out when the Meta ids weren't ready the first time (fresh
