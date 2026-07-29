@@ -616,28 +616,16 @@
         storeAlt.style.display = 'block';
         storeAlt.style.textDecoration = 'underline';
         storeAlt.textContent = 'Oder erstmal nur die App laden';
-        storeAlt.href = decoratedStoreURL();
-        storeAlt.target = '_blank';
-        storeAlt.rel = 'noopener';
+        // Nackter Store-Link im SELBEN Tab: dekorierte URLs lehnte die
+        // App-Store-App als ungültig ab, und target=_blank verlor die
+        // Übergabe in Chrome/In-App-Browsern (Klick ohne Wirkung).
+        storeAlt.href = STORE_URL;
         storeAlt.addEventListener('click', () => {
           try { if (window.fbq) fbq('trackCustom', 'ClickedAppStoreButton', { source: 'quiz' }); } catch (_e) {}
         });
         el.appendChild(storeAlt);
       },
     ];
-
-    // Session-/Meta-IDs an den Store-Link hängen (Universal-Link-Pfad) — die
-    // globale attribution.js dekoriert nur Links, die beim Laden existieren.
-    function decoratedStoreURL() {
-      try {
-        const url = new URL(STORE_URL);
-        const s = window.__faceItSession || {};
-        if (s.sessionId) url.searchParams.set('fi_session', s.sessionId);
-        if (s.fbc) url.searchParams.set('fbc', s.fbc);
-        if (s.fbp) url.searchParams.set('fbp', s.fbp);
-        return url.toString();
-      } catch (_e) { return STORE_URL; }
-    }
 
     back.addEventListener('click', () => {
       if (step <= FIRST_Q || step > LAST_Q) return;
