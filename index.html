@@ -5,17 +5,24 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <meta name="theme-color" content="#F2EEE5" />
   <meta name="facebook-domain-verification" content="vczrrcs018ijs8wqa5ypj5w4tb1fl0" />
-  <title>Face it — Die KI, die dich konfrontiert statt beruhigt</title>
-  <meta name="description" content="Du kennst alle Atemtechniken und Apps. Die Angst ist immer noch da. Face it ist die erste KI, die dich konfrontiert statt beruhigt. 3 Tage gratis testen." />
+  <title>Face it: App gegen Panikattacken und Angst. Durchziehen statt vermeiden.</title>
+  <meta name="description" content="Selbsthilfe-Training bei Panikattacken und Angst: jeden Tag ein kleiner Schritt zurück in die Situationen, die du vermeidest. Panikhilfe immer kostenlos." />
   <link rel="canonical" href="https://getfaceit.com/" />
 
   <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Face it" />
   <meta property="og:url" content="https://getfaceit.com/" />
-  <meta property="og:title" content="Du kennst alle Atemtechniken und Apps. Die Angst ist immer noch da." />
-  <meta property="og:description" content="Beruhigung löst dein Problem nicht — sie verlängert es. Face it ist die erste KI, die dich konfrontiert statt beruhigt." />
-  <meta property="og:image" content="https://getfaceit.com/assets/gallery-chat.jpg" />
+  <meta property="og:title" content="Panikattacken? Durchziehen statt vermeiden." />
+  <meta property="og:description" content="Jeden Tag ein kleiner Schritt zurück in die Situationen, die du wegen der Panik vermeidest: Bahn, Supermarkt, Treffen. Die Panikhilfe ist immer kostenlos." />
+  <meta property="og:image" content="https://getfaceit.com/assets/og-startseite.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Face it: Panikattacken? Durchziehen statt vermeiden. Daneben der Heute-Screen der App." />
   <meta property="og:locale" content="de_DE" />
   <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Panikattacken? Durchziehen statt vermeiden." />
+  <meta name="twitter:description" content="Jeden Tag ein kleiner Schritt zurück in die Situationen, die du wegen der Panik vermeidest: Bahn, Supermarkt, Treffen. Die Panikhilfe ist immer kostenlos." />
+  <meta name="twitter:image" content="https://getfaceit.com/assets/og-startseite.jpg" />
 
   <link rel="icon" type="image/png" href="assets/app-icon.png" />
   <link rel="apple-touch-icon" href="assets/app-icon.png" />
@@ -25,6 +32,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
 
   <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="home.css" />
 
   <!-- Google Analytics 4 -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-L5N1VTNXRF"></script>
@@ -55,21 +63,89 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "SoftwareApplication",
-    "name": "Face it — Dein KI-Coach",
-    "applicationCategory": "HealthApplication",
-    "operatingSystem": "iOS",
-    "offers": {
-      "@type": "Offer",
-      "price": "59.99",
-      "priceCurrency": "EUR"
-    },
-    "aggregateRating": {
-      "@type": "AggregateRating",
-      "ratingValue": "5.0",
-      "ratingCount": "16"
-    },
-    "url": "https://apps.apple.com/de/app/face-it-dein-ki-coach/id6748347064"
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://getfaceit.com/#website",
+        "url": "https://getfaceit.com/",
+        "name": "Face it",
+        "inLanguage": "de-DE",
+        "publisher": { "@id": "https://getfaceit.com/#org" }
+      },
+      {
+        "@type": "Organization",
+        "@id": "https://getfaceit.com/#org",
+        "name": "Face it",
+        "url": "https://getfaceit.com/",
+        "logo": "https://getfaceit.com/assets/logo-black.png"
+      },
+      {
+        "@type": "WebPage",
+        "@id": "https://getfaceit.com/#webpage",
+        "url": "https://getfaceit.com/",
+        "name": "Face it: App gegen Panikattacken und Angst. Durchziehen statt vermeiden.",
+        "description": "Selbsthilfe-Training bei Panikattacken und Angst: jeden Tag ein kleiner Schritt zurück in die Situationen, die du vermeidest. Panikhilfe immer kostenlos.",
+        "inLanguage": "de-DE",
+        "isPartOf": { "@id": "https://getfaceit.com/#website" },
+        "about": { "@id": "https://getfaceit.com/#app" },
+        "primaryImageOfPage": "https://getfaceit.com/assets/og-startseite.jpg"
+      },
+      {
+        "@type": "MobileApplication",
+        "@id": "https://getfaceit.com/#app",
+        "name": "Face it: Angst & Panikattacken",
+        "alternateName": "Face it",
+        "applicationCategory": "HealthApplication",
+        "operatingSystem": "iOS",
+        "inLanguage": "de",
+        "description": "Selbsthilfe-Training für Menschen mit Panikattacken und Angst. Jeden Tag eine kleine Konfrontation mit den Situationen, die du vermeidest. Die Panikhilfe ist immer kostenlos. Face it ersetzt keine Therapie.",
+        "url": "https://apps.apple.com/de/app/face-it-dein-ki-coach/id6748347064",
+        "image": "https://getfaceit.com/assets/app-icon.png",
+        "publisher": { "@id": "https://getfaceit.com/#org" },
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "EUR",
+          "description": "Kostenloser Download. Panikhilfe immer kostenlos, die ersten zwei Tage kostenlos. Danach 3 Tage kostenlos testen, dann 9,99 € im Monat oder 59,99 € im Jahr."
+        }
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://getfaceit.com/#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Was ist die Panikhilfe?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Die Panikhilfe ist für den Moment, in dem die Panik da ist. Sie sagt dir zuerst das Wichtigste: nicht flüchten. Dann benennst du, was du befürchtest, zum Beispiel „Ich kippe um“, bleibst zwei Minuten und prüfst, was wirklich passiert ist. Sie ist immer kostenlos, auch ohne Abo. Sind die Beschwerden neu oder anders als sonst, lass sie ärztlich abklären. Im Notfall wähl die 112." }
+          },
+          {
+            "@type": "Question",
+            "name": "Für wen ist Face it?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Für Menschen mit Panikattacken und Angst, die merken, dass Vermeiden ihr Leben kleiner macht: in vollen Bahnen, im Supermarkt, bei Treffen, beim Autofahren oder in engen Räumen. Face it ist ein Selbsthilfe-Training für iPhone. In einer akuten Krise ist eine App nicht der richtige Ort: Ruf die 112 oder die Telefonseelsorge an (0800 111 0 111, kostenlos, rund um die Uhr)." }
+          },
+          {
+            "@type": "Question",
+            "name": "Ersetzt Face it eine Therapie?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Nein. Face it ist ein Selbsthilfe-Training und ersetzt keine Therapie. Die Übungen kommen aus der Verhaltenstherapie: Du stellst dich in kleinen Schritten dem, was du vermeidest, und prüfst, ob das Befürchtete wirklich eintritt. In der App findest du unter „Methode und Quellen“ die Leitlinien und Studien, auf denen das beruht. Wenn deine Beschwerden anhalten oder dich stark einschränken, hol dir ärztliche oder psychotherapeutische Hilfe. Mehr dazu: App statt Therapie bei Angst: sinnvoll oder nicht?" }
+          },
+          {
+            "@type": "Question",
+            "name": "Was kostet Face it?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Die Panikhilfe ist immer kostenlos. Die ersten zwei Tage sind kostenlos, ohne Abo. Danach testest du den vollen Plan 3 Tage kostenlos. Anschließend kostet er 9,99 € im Monat oder 59,99 € im Jahr. Kündigen kannst du jederzeit in den Einstellungen deiner Apple-ID. Kündigst du spätestens 24 Stunden vor Ende des Tests, wird nichts abgebucht." }
+          },
+          {
+            "@type": "Question",
+            "name": "Wie geht Face it mit KI und deinen Daten um?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Dein Coach im Chat ist eine KI, kein Mensch. Auch die Stufen deiner Angst-Leiter schreibt eine KI. Dafür schickt Face it Daten an OpenAI, aber nur, wenn du in der App ausdrücklich zustimmst. Geschickt werden deine Nachrichten und Sprachnachrichten an den Coach, deine Ängste und Leitern, deine Stimmung und dein Fortschritt. Das läuft über unseren Server zu OpenAI in den USA. OpenAI nutzt diese Daten nicht, um seine KI zu trainieren. Deine Zustimmung kannst du jederzeit in den Einstellungen unter „KI-Coach“ zurücknehmen. Ohne KI laufen Sessions, Lektionen und die Panikhilfe ganz normal. Die Videos in der App zeigen Sergej als KI-Avatar, gesprochen nach seinem Skript. Alles Weitere steht in der Datenschutzerklärung." }
+          },
+          {
+            "@type": "Question",
+            "name": "Gibt es Face it für Android?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Aktuell nur für iOS, also iPhone und iPad. Eine Android-Version ist in Arbeit." }
+          }
+        ]
+      }
+    ]
   }
   </script>
   <!-- Microsoft Clarity -->
@@ -96,7 +172,7 @@
     <div class="header-actions">
       <a href="https://apps.apple.com/de/app/face-it-dein-ki-coach/id6748347064" class="btn btn-primary btn-sm header-cta" data-cta="header">
         <svg class="btn-apple" viewBox="0 0 384 512" aria-hidden="true"><path fill="currentColor" d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/></svg>
-        3 Tage gratis testen
+        Kostenlos laden
       </a>
       <button class="nav-burger" type="button" data-nav-toggle aria-expanded="false" aria-controls="megaPanel" aria-label="Menü öffnen"><span></span><span></span><span></span></button>
     </div>
@@ -142,476 +218,290 @@
 
 <main id="top">
 
-  <!-- ============ SECTION 1 — HERO ============ -->
-  <section class="hero">
+  <!-- ============ 1 · HERO ============ -->
+  <section class="hero hero-rl">
     <div class="container hero-inner">
       <div class="hero-copy reveal">
-        <p class="eyebrow">Tough Love. Keine Ausreden.</p>
-        <h1 class="display-1">
-          Du kennst alle Atemtechniken und Apps.<br />
-          Die Angst ist immer noch da.
-        </h1>
-        <p class="hero-sub">
-          Du hast Angst. Du hast versucht, sie wegzuatmen. Es funktioniert nicht — weil Beruhigung dein Problem nicht löst, sondern es verlängert. Face it ist die erste KI, die dich konfrontiert statt beruhigt.
-        </p>
+        <p class="eyebrow">Selbsthilfe-Training für iPhone</p>
+        <h1 class="display-1 hero-title">Panik&shy;attacken?<br />Durchziehen statt vermeiden.</h1>
+        <p class="hero-sub">Jeden Tag ein kleiner Schritt zurück in die Situationen, die du wegen der Panik vermeidest: Bahn, Supermarkt, Treffen.</p>
+        <p class="hero-sub2">5&nbsp;bis&nbsp;10&nbsp;Minuten am Tag. Eine Konfrontation, so groß, wie du sie schaffst.</p>
 
         <div class="cta-block">
           <a href="https://apps.apple.com/de/app/face-it-dein-ki-coach/id6748347064" class="btn btn-primary btn-lg" data-cta="hero">
             <svg class="btn-apple" viewBox="0 0 384 512" aria-hidden="true"><path fill="currentColor" d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/></svg>
-            Jetzt 3 Tage gratis testen
+            Kostenlos laden
           </a>
-          <p class="micro">3 Tage gratis · Reality Check für immer kostenlos · jederzeit kündbar</p>
-        </div>
-
-        <div class="trust-strip">
-          <span class="stars" aria-hidden="true">★★★★★</span>
-          <span><strong>5.0 auf dem App Store</strong> — „Endlich eine App, die mich nicht in Watte packt."</span>
+          <p class="free-note"><span class="free-dot" aria-hidden="true"></span>Panikhilfe immer kostenlos</p>
+          <p class="micro">Die ersten zwei Tage kostenlos · danach 3 Tage Test · jederzeit kündbar</p>
         </div>
       </div>
 
       <div class="hero-visual reveal">
-        <div class="phone-mock" data-parallax aria-label="Face it App: dein Vermeidungs-Level sinkt Woche für Woche">
-          <div class="phone-tilt">
-            <div class="phone-frame">
-              <!-- Live-Nachbau des Heute-Screens der App (3.0): die Kurve
-                   zeichnet sich mit echten Rückschlägen nach unten, die
-                   Zahl folgt ihr, die Pflanze wächst und bekommt Farbe. -->
-              <div class="fad-screen" aria-hidden="true">
-                <div class="fad-head">
-                  <div class="fad-head-copy">
-                    <span class="fad-day">Tag 24 · Woche 4</span>
-                    <span class="fad-title">Heute</span>
-                  </div>
-                  <span class="fad-streak">
-                    <svg viewBox="0 0 448 512" aria-hidden="true"><path fill="currentColor" d="M159.3 5.4c7.8-7.3 19.9-7.2 27.7.1c27.6 25.9 53.5 53.8 77.7 84c11-14.4 21.5-30.1 31.3-47.3c5.9-10.3 19.7-12.3 27.9-3.8c32.3 33.5 126.1 143.7 126.1 233.6c0 133.1-98.9 240-224 240S0 405.1 0 272C0 167.6 90.7 78.6 159.3 5.4zM224 456c50 0 96-40 96-104c0-46.8-40.5-95.4-64.4-119.7c-7.9-8-20.8-7.9-28.5.4c-16.3 17.5-40 45.6-54.7 72.7c-9.7-12.1-20.5-23.2-31.4-33.1c-8-7.3-20.4-7.1-27.9 .7C93.4 293.3 64 330 64 352c0 64 46 104 96 104h64z"/></svg>
-                    24
-                  </span>
-                </div>
-                <div class="fad-card">
-                  <div class="fad-row">
-                    <span class="fad-label">Dein Vermeidungs-Level</span>
-                    <span class="fad-badge" id="fadBadge">Hoch</span>
-                  </div>
-                  <div class="fad-level">
-                    <div class="fad-numwrap">
-                      <span class="fad-num" id="fadNum">8.6</span><span class="fad-den">/ 10</span>
-                      <span class="fad-delta" id="fadDelta"><svg viewBox="0 0 320 512"><path fill="currentColor" d="M137.4 374.6c12.5 12.5 32.8 12.5 45.3 0l128-128c9.2-9.2 11.9-22.9 6.9-34.9s-16.6-19.8-29.6-19.8L32 192c-12.9 0-24.6 7.8-29.6 19.8s-2.2 25.7 6.9 34.9l128 128z"/></svg>5.4</span>
-                    </div>
-                    <svg class="fad-plant" id="fadPlant" viewBox="0 0 48 60">
-                      <g class="fad-p1">
-                        <path d="M24 56 C24 46 24 40 24 32" stroke="#5CA845" stroke-width="2.6" fill="none" stroke-linecap="round"/>
-                        <path d="M24 44 C19 42 15 38 14 32 C20 33 23 37 24 42 Z" fill="#6FBF52"/>
-                      </g>
-                      <g class="fad-p2">
-                        <path d="M24 38 C29 36 33 32 34 26 C28 27 25 31 24 36 Z" fill="#7ED957"/>
-                        <path d="M24 32 C19 30 16 26 15 21 C21 22 23 26 24 30 Z" fill="#6FBF52"/>
-                      </g>
-                      <g class="fad-p3">
-                        <circle cx="24" cy="16" r="6.5" fill="#7ED957"/>
-                        <circle cx="18" cy="20" r="4.2" fill="#8FE668"/>
-                        <circle cx="30" cy="20" r="4.2" fill="#8FE668"/>
-                        <circle cx="24" cy="16" r="2.4" fill="#F2EEE5"/>
-                      </g>
-                      <ellipse cx="24" cy="57" rx="9" ry="2.6" fill="#3A3A3A"/>
-                    </svg>
-                  </div>
-                  <svg class="fad-chart" viewBox="0 0 280 84" preserveAspectRatio="none">
-                    <path id="fadPath" d="M8 12 C26 8 34 24 52 23 C70 22 76 10 94 17 C112 24 118 46 136 42 C154 38 160 24 178 32 C196 40 202 60 220 58 C238 56 252 64 272 70" fill="none" stroke="rgba(255,255,255,0.85)" stroke-width="2.6" stroke-linecap="round"/>
-                    <circle id="fadDot" class="fad-dot" cx="8" cy="12" r="4.5" fill="#7ED957"/>
-                  </svg>
-                  <div class="fad-axis"><span>Start</span><span>Heute</span></div>
-                  <p class="fad-foot">Bewegt sich nur, wenn du dich bewegst. Sessions und Konfrontationen drücken es runter.</p>
-                </div>
-                <div class="fad-session">
-                  <div class="fad-srow"><span>Deine Session heute</span><span>5-10 Min.</span></div>
-                  <p class="fad-stitle">Dranbleiben, wenn es leicht wird</p>
-                  <div class="fad-sbtn">Heutige Session starten</div>
-                </div>
-                <div class="fad-support">
-                  <div class="fad-tile">
-                    <svg viewBox="0 0 512 512" aria-hidden="true"><path fill="currentColor" d="M288 32c0 17.7 14.3 32 32 32h32c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32 14.3-32 32s14.3 32 32 32H352c53 0 96-43 96-96s-43-96-96-96H320c-17.7 0-32 14.3-32 32zm64 352c0 17.7 14.3 32 32 32h32c53 0 96-43 96-96s-43-96-96-96H32c-17.7 0-32 14.3-32 32s14.3 32 32 32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H384c-17.7 0-32 14.3-32 32zM128 512H160c53 0 96-43 96-96s-43-96-96-96H32c-17.7 0-32 14.3-32 32s14.3 32 32 32H160c17.7 0 32 14.3 32 32s-14.3 32-32 32H128c-17.7 0-32 14.3-32 32s14.3 32 32 32z"/></svg>
-                    <b>Panik-Hilfe</b>
-                    <span>Wenn es akut wird</span>
-                  </div>
-                  <div class="fad-tile">
-                    <svg viewBox="0 0 512 512" aria-hidden="true"><path fill="currentColor" d="M512 240c0 114.9-114.6 208-256 208c-37.1 0-72.3-6.4-104.1-17.9c-11.9 8.7-31.3 20.6-54.3 30.6C73.6 471.1 44.7 480 16 480c-6.5 0-12.3-3.9-14.8-9.9c-2.5-6-1.1-12.8 3.4-17.4c0 0 0 0 0 0s0 0 0 0s0 0 0 0c0 0 0 0 0 0l.3-.3c.3-.3 .7-.7 1.3-1.4c1.1-1.2 2.8-3.1 4.9-5.7c4.1-5 9.6-12.4 15.2-21.6c10-16.6 19.5-38.4 21.4-62.9C17.7 326.8 0 285.1 0 240C0 125.1 114.6 32 256 32s256 93.1 256 208z"/></svg>
-                    <b>Coach</b>
-                    <span>Sag, was los ist</span>
-                  </div>
-                </div>
-                <div class="fad-tabbar">
-                  <div class="fad-tab is-active">
-                    <svg viewBox="0 0 512 512" aria-hidden="true"><path fill="currentColor" d="M361.5 1.2c5 2.1 8.6 6.6 9.6 11.9L391 121l107.9 19.8c5.3 1 9.8 4.6 11.9 9.6s1.5 10.7-1.6 15.2L446.9 256l62.3 90.3c3.1 4.5 3.7 10.2 1.6 15.2s-6.6 8.6-11.9 9.6L391 391 371.1 498.9c-1 5.3-4.6 9.8-9.6 11.9s-10.7 1.5-15.2-1.6L256 446.9l-90.3 62.3c-4.5 3.1-10.2 3.7-15.2 1.6s-8.6-6.6-9.6-11.9L121 391 13.1 371.1c-5.3-1-9.8-4.6-11.9-9.6s-1.5-10.7 1.6-15.2L65.1 256 2.8 165.7c-3.1-4.5-3.7-10.2-1.6-15.2s6.6-8.6 11.9-9.6L121 121 140.9 13.1c1-5.3 4.6-9.8 9.6-11.9s10.7-1.5 15.2 1.6L256 65.1 346.3 2.8c4.5-3.1 10.2-3.7 15.2-1.6zM160 256a96 96 0 1 1 192 0 96 96 0 1 1 -192 0z"/></svg>
-                    <span>Heute</span>
-                  </div>
-                  <div class="fad-tab">
-                    <svg viewBox="0 0 512 512" aria-hidden="true"><path fill="currentColor" d="M512 240c0 114.9-114.6 208-256 208c-37.1 0-72.3-6.4-104.1-17.9c-11.9 8.7-31.3 20.6-54.3 30.6C73.6 471.1 44.7 480 16 480c-6.5 0-12.3-3.9-14.8-9.9c-2.5-6-1.1-12.8 3.4-17.4c0 0 0 0 0 0l.3-.3c.3-.3 .7-.7 1.3-1.4c1.1-1.2 2.8-3.1 4.9-5.7c4.1-5 9.6-12.4 15.2-21.6c10-16.6 19.5-38.4 21.4-62.9C17.7 326.8 0 285.1 0 240C0 125.1 114.6 32 256 32s256 93.1 256 208z"/></svg>
-                    <span>Chat</span>
-                  </div>
-                  <div class="fad-tab">
-                    <svg viewBox="0 0 576 512" aria-hidden="true"><path fill="currentColor" d="M576 96c0 17.7-14.3 32-32 32H448v96c0 17.7-14.3 32-32 32H320v96c0 17.7-14.3 32-32 32H192v96c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32h96V352c0-17.7 14.3-32 32-32h96V224c0-17.7 14.3-32 32-32h96V96c0-17.7 14.3-32 32-32H544c17.7 0 32 14.3 32 32z"/></svg>
-                    <span>Leiter</span>
-                  </div>
-                  <div class="fad-tab">
-                    <svg viewBox="0 0 512 512" aria-hidden="true"><path fill="currentColor" d="M288 32c0 17.7 14.3 32 32 32h32c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32 14.3-32 32s14.3 32 32 32H352c53 0 96-43 96-96s-43-96-96-96H320c-17.7 0-32 14.3-32 32zm64 352c0 17.7 14.3 32 32 32h32c53 0 96-43 96-96s-43-96-96-96H32c-17.7 0-32 14.3-32 32s14.3 32 32 32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H384c-17.7 0-32 14.3-32 32zM128 512H160c53 0 96-43 96-96s-43-96-96-96H32c-17.7 0-32 14.3-32 32s14.3 32 32 32H160c17.7 0 32 14.3 32 32s-14.3 32-32 32H128c-17.7 0-32 14.3-32 32s14.3 32 32 32z"/></svg>
-                    <span>Panik</span>
-                  </div>
-                </div>
+        <div class="device device-hero">
+          <img src="assets/screens/01_today.webp" width="720" height="1564" fetchpriority="high" decoding="async"
+               alt="Heute-Screen von Face it: die Session des Tages mit festem Termin um 18:30, darunter „Deine Beweise“: Von 2 Befürchtungen sind 2 nicht eingetreten." />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 2 · ERKENNST DU DICH WIEDER? ============ -->
+  <section class="section section-soft" id="erkennst-du-dich">
+    <div class="container">
+      <header class="section-header center reveal">
+        <h2 class="display-2">Erkennst du dich wieder?</h2>
+        <p class="lead section-lead">Nach ein paar Panikattacken fürchtest du das Gefühl selbst. Also fängst du an zu vermeiden. Meistens so, dass es niemand merkt.</p>
+      </header>
+
+      <ul class="signs">
+        <li class="sign reveal">
+          <span class="sign-box" aria-hidden="true"><svg viewBox="0 0 16 16"><path d="M3 8.5l3.2 3L13 4.8" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          <b class="sign-title">Du sagst ab.</b>
+          <span class="sign-text">Kopfschmerzen, keine Zeit, irgendein Grund findet sich. Der eigentliche Grund ist die Angst.</span>
+        </li>
+        <li class="sign reveal">
+          <span class="sign-box" aria-hidden="true"><svg viewBox="0 0 16 16"><path d="M3 8.5l3.2 3L13 4.8" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          <b class="sign-title">Du flüchtest.</b>
+          <span class="sign-text">Sobald das Herz rast, bist du weg. Aus der Bahn, aus dem Meeting. Den vollen Einkaufswagen lässt du einfach stehen.</span>
+        </li>
+        <li class="sign reveal">
+          <span class="sign-box" aria-hidden="true"><svg viewBox="0 0 16 16"><path d="M3 8.5l3.2 3L13 4.8" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          <b class="sign-title">Du googelst deine Symptome.</b>
+          <span class="sign-text">Herzstolpern, Kribbeln, Druck im Kopf. Du liest, bis du dich beruhigt hast. Am nächsten Tag liest du wieder.</span>
+        </li>
+        <li class="sign reveal">
+          <span class="sign-box" aria-hidden="true"><svg viewBox="0 0 16 16"><path d="M3 8.5l3.2 3L13 4.8" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          <b class="sign-title">Du fragst zum dritten Mal nach.</b>
+          <span class="sign-text">Ob das wirklich nur Angst ist. Beim Partner, bei der Ärztin, in Foren. Die Rückversicherung hält nie lange.</span>
+        </li>
+        <li class="sign reveal">
+          <span class="sign-box" aria-hidden="true"><svg viewBox="0 0 16 16"><path d="M3 8.5l3.2 3L13 4.8" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          <b class="sign-title">Du gehst nie ohne Absicherung los.</b>
+          <span class="sign-text">Handy, Wasserflasche, jemand, der mitkommt. Die Tablette steckt für alle Fälle in der Tasche.</span>
+        </li>
+        <li class="sign reveal">
+          <span class="sign-box" aria-hidden="true"><svg viewBox="0 0 16 16"><path d="M3 8.5l3.2 3L13 4.8" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          <b class="sign-title">Du sitzt am Ausgang.</b>
+          <span class="sign-text">Platz am Gang, Tisch an der Tür, im Kino ganz außen. Damit du jederzeit weg kannst.</span>
+        </li>
+      </ul>
+
+      <div class="trap reveal">
+        <p class="trap-big">Jedes Mal wird es kurz besser. Genau das ist die Falle.</p>
+        <p class="trap-text">Dein Gehirn lernt: Ich bin nur davongekommen, weil ich geflüchtet bin. Beim nächsten Mal ist die Angst früher da.</p>
+        <p class="more-link"><a href="/vermeidung-konfrontation/sicherheitsverhalten-abbauen/">Mehr dazu: Sicherheitsverhalten erkennen und abbauen</a></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 3 · WARUM BERUHIGEN NICHT REICHT (Video V4) ============ -->
+  <section class="section section-dark" id="beruhigung">
+    <div class="container">
+      <div class="vid-grid">
+        <div class="vid-copy reveal">
+          <p class="eyebrow eyebrow-light">Warum Beruhigen nicht reicht</p>
+          <h2 class="display-2">Beruhigung wird zur Krücke. Und die Angst bleibt der Chef.</h2>
+          <p class="lead">Atem-Apps, Entspannung, „denk an was Schönes“. Das hilft für den Moment.</p>
+          <p class="lead">Aber dein Gehirn lernt daraus: Ich habe es nur geschafft, weil ich mich beruhigt habe. Beim nächsten Mal brauchst du die Beruhigung wieder.</p>
+          <p class="lead lead-strong">Face it setzt woanders an: Du bleibst in der Situation und prüfst, ob das eintritt, was du befürchtest.</p>
+          <p class="more-link"><a href="/warum-funktioniert-nicht/beruhigung-verschlimmert-angst/">Weiterlesen: Warum Beruhigung deine Angst verschlimmert</a></p>
+        </div>
+
+        <figure class="vid reveal">
+          <div class="vid-frame">
+            <video controls preload="none" playsinline poster="assets/video/v4-poster.jpg" width="1280" height="720" data-video="v4_beruhigung" aria-label="Video mit Sergej: Warum Beruhigung die Angst füttert, 1 Minute">
+              <source src="videos/v4_beruhigung.mp4" type="video/mp4" />
+            </video>
+            <button class="vid-play" type="button" hidden aria-label="Video abspielen: Warum Beruhigung die Angst füttert, 1 Minute"><span class="vid-play-icon" aria-hidden="true"></span>Video ansehen · 1 Min.</button>
+          </div>
+          <figcaption>
+            <p class="vid-title"><strong>Warum Beruhigung die Angst füttert.</strong> Sergej, 1&nbsp;Minute</p>
+            <p class="ai-note"><span class="ai-badge">Mit KI erstellt</span>Die Videos zeigen Sergej als KI-Avatar, gesprochen nach seinem Skript.</p>
+            <details class="transcript">
+              <summary>Was Sergej im Video sagt</summary>
+              <div class="transcript-body">
+                <p>Alle wollen dich beruhigen. Atem-Apps, Entspannungsübungen sagen oft: Denk an was Schönes. Und ich sag dir, warum das die Angst am Leben hält.</p>
+                <p>Wenn du dich in der Situation beruhigst, lernt dein Gehirn: Ich bin nur heil rausgekommen, weil ich mich beruhigt habe. Ohne die beruhigende Atmung hätte ich es nicht geschafft. Die Beruhigung wird zur Krücke, und die Angst bleibt der Chef.</p>
+                <p>Einwand eins: Aber ich halte das ohne nicht aus. Doch, du hältst es aus. Du hast es nur noch nie bis zum Ende probiert. Adrenalin baut sich von selbst ab.</p>
+                <p>Einwand zwei: Konfrontation macht es schlimmer. Am Anfang, ja. Wer aufhört zu vermeiden, spürt die Angst erst mal mehr. Das ist kein Rückschritt, das ist der Preis dafür, dass du endlich deine Komfortzone verlässt.</p>
+                <p>Einwand drei: Ohne Therapeut geht das nicht. Für viele ist Therapie der richtige Weg, und Face it ersetzt sie nicht. Aber worauf du nicht warten musst, ist der Wartelistenplatz, um heute eine kleine Konfrontation zu machen. Der Therapeut erledigt die Konfrontation ohnehin nicht für dich. Du kannst heute selbst einen ersten Schritt machen.</p>
+              </div>
+            </details>
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 4 · SO FUNKTIONIERT FACE IT ============ -->
+  <section class="section" id="so-funktioniert-es">
+    <div class="container">
+      <header class="section-header center reveal">
+        <p class="eyebrow">So funktioniert Face it</p>
+        <h2 class="display-2">Jeden Tag ein kleiner Schritt gegen das Vermeiden.</h2>
+        <p class="lead section-lead">5&nbsp;bis&nbsp;10&nbsp;Minuten am Tag. Du übst genau in den Situationen, die dir Angst machen.</p>
+      </header>
+
+      <ol class="steps">
+        <li class="step">
+          <div class="step-copy reveal">
+            <div class="step-head"><span class="step-num">1</span><span class="step-tag">Immer kostenlos</span></div>
+            <h3 class="step-title">Panikhilfe, wenn es dich erwischt</h3>
+            <p>Herzrasen, Schwindel, Enge. Die Panikhilfe sagt dir zuerst das Wichtigste: nicht flüchten. Dann benennst du, was du befürchtest, bleibst zwei Minuten und prüfst, was wirklich passiert ist.</p>
+            <p>Die Panikhilfe ist immer kostenlos, auch ohne Abo.</p>
+          </div>
+          <div class="step-media reveal">
+            <div class="device">
+              <img src="assets/screens/02_panic.webp" width="720" height="1564" loading="lazy" decoding="async"
+                   alt="Panikhilfe in Face it: „Verspürst du gerade Panik? Das Wichtigste ist, nicht zu flüchten.“ Darunter der Knopf „Ich bleibe“." />
+            </div>
+          </div>
+        </li>
+
+        <li class="step">
+          <div class="step-copy reveal">
+            <div class="step-head"><span class="step-num">2</span></div>
+            <h3 class="step-title">Jeden Tag eine Konfrontation, die du schaffst</h3>
+            <p>Deine Session: Check-in, eine kurze Lektion, eine Konfrontation aus deiner Angst-Leiter. Die Leiter hat fünf Stufen, von „kaum unangenehm“ bis zu dem, was du wirklich vermeidest. Passt eine Stufe nicht in dein Leben, sagst du es und bekommst eine, die passt.</p>
+            <ul class="step-list">
+              <li>28 kurze Lektionen, zum Beispiel „Was Panik im Körper macht“</li>
+              <li>Ein fester Termin: Du wählst die Uhrzeit für deine nächste Session, Face it meldet sich mit deinem nächsten Schritt</li>
+              <li>Dein Vermeidungs-Level von 0 bis 10: Es sinkt nur, wenn du dich bewegst</li>
+            </ul>
+          </div>
+          <div class="step-media reveal">
+            <div class="device">
+              <img src="assets/screens/03_ladder.webp" width="720" height="1564" loading="lazy" decoding="async"
+                   alt="Angst-Leiter „Panikattacke in der vollen Bahn“: Stufe 1 „Frag im Laden nach der Uhrzeit“ ist erledigt, Stufe 2 „Fahr eine Station mit der Bahn“ ist als Nächstes dran." />
+            </div>
+          </div>
+        </li>
+
+        <li class="step">
+          <div class="step-copy reveal">
+            <div class="step-head"><span class="step-num">3</span></div>
+            <h3 class="step-title">Vorher befürchtet, nachher geprüft</h3>
+            <p>Vor jeder Konfrontation schreibst du auf, wovor du am meisten Angst hast und wie sicher du dir bist. Danach siehst du schwarz auf weiß, ob es eingetreten ist.</p>
+            <div class="proof" role="group" aria-label="Beispiel aus der App">
+              <p class="proof-k">Beispiel aus der App</p>
+              <p class="proof-line"><span class="proof-label">Befürchtet</span><span class="proof-value">Ich kippe um, 70 % sicher</span></p>
+              <p class="proof-line proof-ok"><span class="proof-label">Passiert</span><span class="proof-value">Nein</span></p>
+            </div>
+            <p>So sammeln sich deine Beweise. Wenn dir die Angst erzählt, dass es diesmal anders läuft, schaust du nicht in deinen Kopf, sondern auf deine Beweise.</p>
+          </div>
+          <div class="step-media reveal">
+            <div class="device-pair">
+              <div class="device">
+                <img src="assets/screens/04_expectation_before.webp" width="720" height="1564" loading="lazy" decoding="async"
+                     alt="Erwartungs-Check vor der Konfrontation „Fahr eine Station mit der Bahn“: „Was macht dir an dieser Situation am meisten Angst?“ Gewählt ist „Ich kippe um“, 70 Prozent sicher." />
+              </div>
+              <div class="device">
+                <img src="assets/screens/05_expectation_result.webp" width="720" height="1564" loading="lazy" decoding="async"
+                     alt="Nach der Konfrontation: „Befürchtet: Ich kippe um (70 % sicher). Passiert: Nein. Genau dieser Beweis zählt.“" />
               </div>
             </div>
           </div>
-        </div>
-      </div>
-    </div>
-  </section>
+        </li>
 
-  <!-- ============ SECTION 2 — PAIN AGITATION ============ -->
-  <section class="section">
-    <div class="container narrow">
-      <header class="section-header reveal">
-        <h2 class="display-2">Erkennst du dich wieder?</h2>
-      </header>
-
-      <div class="pain-stack">
-        <article class="pain-card reveal">
-          <p class="card-num">01</p>
-          <h3 class="card-title">Du weißt es. Du machst es nicht.</h3>
-          <p>Die Mail liegt seit vier Tagen offen. Das Gespräch hast du dreimal verschoben. Die Bewerbung? Noch im Entwurf-Ordner.</p>
-          <p>Das Schlimmste daran: Du hörst dir selbst zu, wie du Ausreden baust. Und du hasst diese Stimme.</p>
-          <blockquote class="pull">„Ich bin doch eigentlich klüger als das."</blockquote>
-          <p class="kicker">Bist du. Macht es nur leichter.</p>
-        </article>
-
-        <article class="pain-card reveal">
-          <p class="card-num">02</p>
-          <h3 class="card-title">Du arbeitest seit Jahren an dir. Es wird nicht besser.</h3>
-          <p>Atomic Habits gelesen. Headspace probiert. Vielleicht ein paar Therapiesitzungen gemacht. Tausend YouTube-Videos zu Mindset, Stoizismus, Disziplin.</p>
-          <p>Fünf Jahre später: dasselbe Gefühl. Dieselben Muster. Dieselben Ausreden, nur in neuen Verkleidungen.</p>
-          <p>Irgendwann fängt man an zu glauben, man sei das Problem.</p>
-          <p class="kicker">Du bist es nicht. Aber das, was du versucht hast, war es.</p>
-        </article>
-
-        <article class="pain-card reveal">
-          <p class="card-num">03</p>
-          <h3 class="card-title">3 Uhr morgens. Wieder.</h3>
-          <p>Du wachst auf. Herzrasen. Dein Hirn spielt dir den Highlight-Reel deiner peinlichsten Momente vor — das Gespräch von gestern, der Fehler von vor fünf Jahren, die Mail die du morgen schreiben musst.</p>
-          <p>Tagsüber funktionierst du. Nachts bist du allein mit einem Kopf, der dich auffrisst.</p>
-          <p class="kicker">Und niemand sieht es.</p>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ SECTION 2.5 — DER PREIS DER VERMEIDUNG ============ -->
-  <section class="section section-soft">
-    <div class="container narrow">
-      <header class="section-header center reveal">
-        <p class="eyebrow">Der Preis der Vermeidung</p>
-        <h2 class="display-2">Was passiert, wenn du weiter auf falsche Signale hörst.</h2>
-      </header>
-
-      <div class="reveal cost-intro">
-        <p class="lead">Dein Körper hat einen Alarm. Er löst nicht aus, wenn Gefahr da ist — er löst aus, wenn dein Hirn <em>glaubt</em>, dass Gefahr da ist.</p>
-        <p class="lead lead-strong">Und genau das ist das Problem.</p>
-        <p class="lead">Eine Mail, die du öffnen müsstest. Ein Gespräch, das ansteht. Die Tür, durch die du gehen müsstest. Dein Hirn schickt dir dasselbe Signal wie bei echter Gefahr: Herzrasen. Magen zu. Atem flach. Das Bedürfnis, weg zu sein.</p>
-        <p class="lead">Du gehorchst. Weil es sich <strong>echt</strong> anfühlt.</p>
-        <p class="lead lead-strong">Es ist nicht echt. Es ist gelernt.</p>
-      </div>
-
-      <div class="cost-stack">
-        <article class="cost-card reveal">
-          <p class="cost-num">01</p>
-          <h3 class="cost-title">Jede Vermeidung trainiert dein Hirn.</h3>
-          <p>Es lernt: „Diese Sache war gefährlich. Hat ja gerade gewirkt, dass wir weggegangen sind." Beim nächsten Mal kommt das Signal <strong>früher und stärker</strong>. Vermeidung ist die einzige Therapie, die dein Problem garantiert vergrößert.</p>
-        </article>
-
-        <article class="cost-card reveal">
-          <p class="cost-num">02</p>
-          <h3 class="cost-title">Deine Komfortzone schrumpft. Jeden Tag ein Stück.</h3>
-          <p>Was vor einem Jahr noch ging, ist heute zu viel. Was heute geht, ist in einem Jahr unmöglich. Niemand merkt es — bis du eines Tages aufwachst und die Welt sich von innen anfühlt wie ein Käfig, den du selbst gebaut hast.</p>
-        </article>
-
-        <article class="cost-card reveal">
-          <p class="cost-num">03</p>
-          <h3 class="cost-title">Aus Vermeidung wird Identität.</h3>
-          <p>„Ich kann das halt nicht." „Ich bin nicht der Typ dafür." „Bei mir ist das anders." Was als Reaktion auf ein Signal anfing, wird zu deinem Selbstbild. Du wirst zu dem Menschen, vor dem du am meisten Angst hattest zu werden.</p>
-        </article>
-
-        <article class="cost-card reveal">
-          <p class="cost-num">04</p>
-          <h3 class="cost-title">Die Angst geht nie weg. Sie wandert nur.</h3>
-          <p>Heute die Mail. Morgen das Telefonat. Übermorgen das Verlassen der Wohnung. Es gibt immer eine nächste Sache, vor der dich dein Hirn schützen will. Wer einmal gelernt hat zu vermeiden, hat unendlich Material.</p>
-        </article>
-      </div>
-
-      <p class="cost-punch reveal">
-        Vermeidung beruhigt dich kurz.<br />
-        <strong>Und macht dein Leben jeden Tag kleiner.</strong>
-      </p>
-    </div>
-  </section>
-
-  <!-- ============ SECTION 3 — BIG IDEA (DARK) ============ -->
-  <section class="section section-dark">
-    <div class="container narrow reveal">
-      <p class="eyebrow eyebrow-light">Die unangenehme Wahrheit</p>
-      <h2 class="display-2">
-        Du hattest nie jemanden,<br />
-        der dir die Wahrheit sagt.
-      </h2>
-
-      <div class="big-idea">
-        <p><strong>Therapeuten dürfen es nicht.</strong> Sie sind ethisch verpflichtet, dich sanft zu begleiten — nicht dich zu konfrontieren wie ein guter Freund es würde.</p>
-        <p><strong>Freunde wollen es nicht.</strong> Sie schützen die Beziehung, nicht dein Wachstum.</p>
-        <p><strong>Mental-Health-Apps sind so gebaut, dass sie es nicht tun.</strong> Ein veränderter Kunde kommt nicht zurück.</p>
-
-        <hr class="rule-light" />
-
-        <p class="lead">Du brauchst keine weitere Atemtechnik. Keinen weiteren Selbsthilfe-Trick. Keinen weiteren Therapeuten, der nicken muss, wenn du dich rausredest.</p>
-        <p class="lead lead-strong">Du brauchst jemanden, der dir die Wahrheit sagt. Auch wenn sie weh tut.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ SECTION 4 — WARUM ALLES ANDERE NICHT FUNKTIONIERT HAT ============ -->
-  <section class="section">
-    <div class="container narrow">
-      <header class="section-header reveal">
-        <h2 class="display-2">Du hast es schon versucht. Hier ist warum es nicht gehalten hat.</h2>
-      </header>
-
-      <div class="fail-stack">
-        <article class="fail-card reveal">
-          <div class="fail-mark">✕</div>
-          <h3 class="card-title">Therapie</h3>
-          <p>Wartelisten von 3–6 Monaten. €80–120 die Stunde. Eine Sitzung pro Woche, 50 Minuten lang.</p>
-          <p>Wenn die Panik um 2 Uhr nachts kommt, ist dein Therapeut nicht da.</p>
-          <p>Und selbst wenn du einen guten erwischst: Therapeuten sind ethisch verpflichtet, dich sanft zu begleiten. Sie dürfen dich nicht so konfrontieren, wie ein guter Freund es würde.</p>
-          <p class="kicker">Du sitzt zwei Jahre und redest über deine Mutter — während dein Leben weiter brennt.</p>
-        </article>
-
-        <article class="fail-card reveal">
-          <div class="fail-mark">✕</div>
-          <h3 class="card-title">Calm, Headspace, Wysa & Co.</h3>
-          <p>Sie fühlen sich an wie ein warmes Bad. Kurz angenehm, dann ist alles wie vorher.</p>
-          <p>Diese Apps sind nicht gebaut, dich zu verändern. Sie sind gebaut, dich zu beruhigen.</p>
-          <p class="kicker">Beruhigung ist ein Geschäftsmodell. Veränderung würde dich aus dem Abo holen.</p>
-        </article>
-
-        <article class="fail-card reveal">
-          <div class="fail-mark">✕</div>
-          <h3 class="card-title">Atomic Habits, 4 AM Club, YouTube-Mindset</h3>
-          <p>Information ohne Verantwortung ist Unterhaltung.</p>
-          <p>Du liest. Du nickst. Du vergisst.</p>
-          <p class="kicker">Niemand fragt dich am Sonntag, warum du das, was du Montag versprochen hast, bis Donnerstag nicht angefangen hast.</p>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ SECTION 5 — DIE NEUE KATEGORIE ============ -->
-  <section class="section section-transition">
-    <div class="container narrow reveal">
-      <p class="eyebrow">Eine neue Kategorie</p>
-      <p class="display-3">
-        Während Calm dir sagt „Atme tief ein", sagt sie:
-      </p>
-      <blockquote class="hero-quote">
-        „Du machst dasselbe seit drei Wochen. Hör auf zu lügen."
-      </blockquote>
-      <p class="lead">
-        Sie ist nicht therapeutisch. Sie ist nicht sanft.<br />
-        Sie ist das, was du gebraucht hättest, als du das letzte Mal vor einer wichtigen
-        Entscheidung gestanden hast und dir selbst Bullshit erzählt hast, um nicht handeln zu müssen.
-      </p>
-      <p class="lead lead-strong">Sie heißt Face it.</p>
-    </div>
-  </section>
-
-  <!-- ============ SECTION 6 — SO REDET FACE IT MIT DIR ============ -->
-  <section class="section">
-    <div class="container">
-      <header class="section-header center reveal">
-        <p class="eyebrow">Was eine ehrliche Antwort wirklich aussieht</p>
-        <h2 class="display-2">Stell dir vor, du schreibst:</h2>
-        <p class="user-prompt">„Ich kann meiner Chefin nicht sagen, dass ich gestresst bin. Ich will sie nicht enttäuschen."</p>
-      </header>
-
-      <div class="compare-grid">
-        <article class="compare-card compare-soft reveal">
-          <header>
-            <p class="compare-label">Was eine Wohlfühl-App sagt</p>
-          </header>
-          <div class="bubble bubble-soft">
-            „Es ist okay, sich überfordert zu fühlen. Versuche eine 5-Minuten-Atemübung und melde dich bei Bedarf in 24 Stunden zurück."
+        <li class="step">
+          <div class="step-copy reveal">
+            <div class="step-head"><span class="step-num">4</span></div>
+            <h3 class="step-title">Wenn du absagen willst: der Coach in der Tasche</h3>
+            <p>„Ich will absagen.“ „Ist das wirklich nur Angst?“ Für acht solche Momente gibt es in der App ein kurzes Video von Sergej und danach direkt deinen nächsten Schritt.</p>
+            <p>Dein Coach im Chat ist eine KI. Er kennt deine Leiter, deine Beweise und deinen Termin. Er fragt nach, statt dich zu beruhigen, und lenkt dich auf den nächsten Schritt.</p>
           </div>
-          <p class="card-meta">Sanft. Vergessen in 10 Minuten. Veränderung: keine.</p>
-        </article>
-
-        <article class="compare-card compare-hard reveal">
-          <header>
-            <p class="compare-label">Was Face it sagt</p>
-          </header>
-          <div class="bubble bubble-hard">
-            „Du willst sie nicht enttäuschen, oder du willst nicht erwachsen werden und ein erwachsenes Gespräch führen? Du hast mir letzte Woche dasselbe über deinen Vater erzählt. Anderer Mensch, gleiches Muster. Lass uns das jetzt machen."
+          <div class="step-media reveal">
+            <div class="device-pair">
+              <div class="device">
+                <img src="assets/screens/06_pocket.webp" width="720" height="1564" loading="lazy" decoding="async"
+                     alt="„Was ist gerade los?“ mit acht Situationen, zum Beispiel „Ich will absagen.“, „Ist das wirklich nur Angst?“ und „Ich will aufgeben.“" />
+              </div>
+              <div class="device">
+                <img src="assets/screens/08_chat.webp" width="720" height="1564" loading="lazy" decoding="async"
+                     alt="Chat mit dem KI-Coach: Er erinnert an gestern („Befürchtet: Ich kippe um, passiert: nein“) und fragt, ob du heute noch einmal eine Station mit der Bahn fährst." />
+              </div>
+            </div>
           </div>
-          <p class="card-meta">Konfrontativ. Erinnert sich. Bewegt dich.</p>
-        </article>
-      </div>
-
-      <p class="section-outro reveal">
-        Das ist der Unterschied. <strong>Und das ist warum es wirkt.</strong>
-      </p>
+        </li>
+      </ol>
     </div>
   </section>
 
-  <!-- ============ SECTION 7 — WIE SIE FUNKTIONIERT ============ -->
-  <section class="section section-soft">
+  <!-- ============ 5 · WAS FACE IT ANDERS MACHT ============ -->
+  <section class="section section-soft" id="anders">
     <div class="container">
       <header class="section-header center reveal">
-        <h2 class="display-2">Drei Bausteine.<br />Eine KI, die dich kennt.</h2>
+        <p class="eyebrow">Was Face it anders macht</p>
+        <h2 class="display-2">Nicht noch eine App, die dich beruhigt.</h2>
       </header>
 
-      <div class="three-col">
-        <article class="feature-card reveal">
-          <div class="feature-num">01</div>
-          <h3 class="card-title">Sie schmeichelt dir nicht.</h3>
-          <p>Trainiert auf konfrontativ-empathischen Coaching-Prinzipien. Nicht darauf, dich glücklich zu machen, sondern dich vorwärts zu bringen.</p>
-          <p class="kicker">Sie weiß: Schmeichelei verändert nichts.</p>
+      <div class="contrast">
+        <article class="contrast-card reveal">
+          <h3 class="contrast-title">Bleiben statt beruhigen.</h3>
+          <p>Beruhigungs-Apps holen dich aus dem Gefühl heraus. Face it hilft dir, in der Situation zu bleiben, bis du weißt, was wirklich passiert.</p>
         </article>
-
-        <article class="feature-card reveal">
-          <div class="feature-num">02</div>
-          <h3 class="card-title">Sie erinnert sich an alles.</h3>
-          <p>Deine Trigger. Deine Ausreden. Deine Muster über Wochen hinweg.</p>
-          <p>Wenn du ihr Donnerstag dieselbe Geschichte erzählst, die du Sonntag erzählt hast, weiß sie es. Und konfrontiert dich damit.</p>
-          <p class="kicker">Dein Therapeut hat 30 Patienten und vergisst, was du letzte Woche gesagt hast. Sie nicht.</p>
+        <article class="contrast-card reveal">
+          <h3 class="contrast-title">Prüfen statt wegatmen.</h3>
+          <p>Atemübungen helfen im Moment. Wenn du dich aber nur mit der richtigen Atmung sicher fühlst, ist sie eine neue Krücke. In Face it prüfst du, ob das Befürchtete eintritt.</p>
         </article>
-
-        <article class="feature-card reveal">
-          <div class="feature-num">03</div>
-          <h3 class="card-title">Sie wird mit der Zeit schärfer.</h3>
-          <p>Je mehr du mit ihr arbeitest, desto besser kennt sie dich.</p>
-          <p class="kicker">Sie lernt nicht nur, was dich triggert — sondern wie du dich davor versteckst.</p>
+        <article class="contrast-card reveal">
+          <h3 class="contrast-title">Hinschauen statt ablenken.</h3>
+          <p>Ablenkung verschiebt die Angst auf später. In Face it schaust du hin: Was befürchtest du, und ist es passiert?</p>
         </article>
       </div>
     </div>
   </section>
 
-  <!-- ============ SECTION 8 — WAS DU JEDEN TAG DAMIT MACHST ============ -->
-  <section class="section">
+  <!-- ============ 6 · GRÜNDER (Video V1) ============
+       Nur Aussagen aus der Store-Beschreibung 3.1 und aus Sergejs Videos. -->
+  <section class="section" id="gruender">
     <div class="container">
-      <header class="section-header center reveal">
-        <p class="eyebrow">Vier Werkzeuge</p>
-        <h2 class="display-2">Was du jeden Tag damit machst.</h2>
-      </header>
-
-      <div class="tools-grid">
-        <article class="tool-card reveal">
-          <div class="tool-icon" aria-hidden="true">💬</div>
-          <h3 class="card-title">Chat</h3>
-          <p>Kein Therapietermin nötig. Wenn die Panik um 23:47 kommt, ist sie da. <strong>Anonym, sofort, ohne Wartezeit.</strong></p>
-        </article>
-
-        <article class="tool-card reveal">
-          <div class="tool-icon" aria-hidden="true">🎯</div>
-          <h3 class="card-title">Tägliche Aufträge</h3>
-          <p>Kleine, spezifische Aktionen, die deine Vermeidungsmuster knacken.</p>
-          <p class="kicker">Nicht „Atme tief ein". Sondern: „Ruf bis 18:00 deinen Vater an."</p>
-        </article>
-
-        <article class="tool-card reveal">
-          <div class="tool-icon" aria-hidden="true">🚨</div>
-          <h3 class="card-title">Reality Check <span class="pill">immer kostenlos</span></h3>
-          <p>Der Panik-Knopf für die Momente, in denen alles bricht. <strong>Funktioniert auch ohne Abo. Für immer.</strong></p>
-        </article>
-
-        <article class="tool-card reveal">
-          <div class="tool-icon" aria-hidden="true">📊</div>
-          <h3 class="card-title">Fear Profile</h3>
-          <p>Sieh schwarz auf weiß, womit du wirklich kämpfst. Wann es passiert. Was es triggert. Wie sich's über Wochen entwickelt.</p>
-          <p class="kicker">Niemand sonst sieht das. Du auch nicht — bis du es siehst.</p>
-        </article>
-      </div>
-
-      <div class="screen-showcase reveal">
-        <figure class="screen-card">
-          <img src="assets/screen-chat.png" alt="Echtes Chat-Beispiel: Face it nimmt dich beim Wort." loading="lazy" />
-          <figcaption>
-            <strong>Chat.</strong> Echte Antwort. Kein Wohlfühl-Sprech.
-          </figcaption>
-        </figure>
-        <figure class="screen-card">
-          <img src="assets/screen-ladder.png" alt="Angstleiter — Schritt für Schritt aus der Vermeidung." loading="lazy" />
-          <figcaption>
-            <strong>Angstleiter.</strong> Eine Angst, fünf Schritte raus.
-          </figcaption>
-        </figure>
-        <figure class="screen-card">
-          <img src="assets/screen-reality.png" alt="Realitäts-Check — der Panik-Knopf." loading="lazy" />
-          <figcaption>
-            <strong>Realitäts-Check.</strong> Wenn alles bricht. Immer kostenlos.
-          </figcaption>
-        </figure>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ SECTION 9 — FOUNDER STORY (temporarily hidden — re-enable later) ============ -->
-  <section class="section section-soft" hidden>
-    <div class="container">
-      <header class="section-header center reveal">
-        <p class="eyebrow">Founder Story</p>
-        <h2 class="display-2">Warum ich Face it gebaut habe.</h2>
-      </header>
-
-      <div class="founder-grid">
-        <figure class="founder-photo reveal">
-          <img src="assets/stephan.jpg" alt="Stephan, Founder von Face it" />
-          <figcaption>Stephan, Founder</figcaption>
-        </figure>
-
-        <div class="founder-letter reveal">
-          <p class="lead lead-strong">Ich habe das Haus drei Wochen lang nicht verlassen.</p>
-          <p>Nicht weil ich faul war. Weil mein Körper mich nicht ließ. Panikattacken, wenn ich nur an die Tür dachte. Tränen, wenn jemand zu freundlich mit mir sprach.</p>
-          <p>Wenn jemand schief geguckt hat, dachte ich tagelang darüber nach. Wenn ich einen Fehler gemacht habe — auch den kleinsten — konnte ich nachts nicht schlafen.</p>
-          <p>Und wenn ich allein mit meinen Kindern war, eine Angst, die mir den Atem nahm. Nicht weil ich ihnen etwas tun würde — sondern weil ich mir nicht zutraute, ihnen ein guter Vater zu sein.</p>
-          <p>Ich nannte das damals „Prokrastination". Heute weiß ich: <strong>Ich hatte aufgehört zu leben.</strong></p>
-
-          <p class="lead lead-strong">In zwei Jahren habe ich alles probiert.</p>
-          <p>Therapie. Headspace. Calm. Waking Up. Jedes Buch über Angst, Prokrastination, Selbstoptimierung. Magnesium. Safran. Antidepressiva. Jede App, jedes Supplement, jede Methode.</p>
-          <p>Es hat alles ein bisschen geholfen. Nichts hat es gelöst.</p>
-
-          <p class="lead lead-strong">Bis ich auf einen anderen Therapeuten gestoßen bin. Einer, der mich nicht in Watte gepackt hat.</p>
-          <p>Was er mir sagte, hat alles verändert:</p>
-          <blockquote class="pull">
-            „In der Komfortzone passiert keine Weiterentwicklung. Bei niemandem. Auch bei dir nicht."<br />
-            „Deine Gedanken sind leer. Sie haben nur die Macht, die du ihnen gibst."
-          </blockquote>
-
-          <p class="lead lead-strong">Plötzlich war alles klar.</p>
-          <p>Es lag nicht am falschen Buch, an der falschen App, am falschen Supplement. Es lag daran, dass mich nie jemand aus der Komfortzone geholt hat. Alle haben mich gestreichelt. Die Apps. Die Bücher. Die meisten Therapeuten. Sogar die Freunde.</p>
-          <p>Und wer gestreichelt wird, bleibt sitzen. Nur eben gestreichelt.</p>
-          <p>Keine Magic Pill konnte mich rausholen. Keine App. Kein Therapeut. <strong>Nur ich selbst — mit jemandem an meiner Seite, der mir keinen Bullshit durchgehen ließ.</strong></p>
-
-          <p class="lead lead-strong">Ich habe Face it gebaut, weil ich genau diese App gebraucht hätte, als ich am Boden lag.</p>
-          <p>Eine, die mich nicht beruhigt. Eine, die mir nicht erzählt, dass alles okay wird. Eine, die mir sagt: „Hör auf, dir das einzureden. Du weißt selbst, was du tun müsstest."</p>
-          <p>Was du hier vor dir hast, sind keine Coaching-Theorien aus einem Buch. Es ist alles, was mich rausgeholt hat — verpackt in eine KI, die 24/7 da ist und sich an jede deiner Ausreden erinnert.</p>
-          <p>Wenn du da stehst, wo ich gestanden habe: probier sie aus. Drei Tage gratis.</p>
-          <p class="kicker">Du hast mehr verloren als drei Tage. Glaub mir.</p>
-          <p class="signature">— Stephan, Founder</p>
-
+      <div class="founder-rl">
+        <div class="founder-copy reveal">
+          <p class="eyebrow">Wer dahintersteckt</p>
+          <h2 class="display-2">Ich bin Sergej. Ich habe Face it gebaut.</h2>
+          <p class="lead">Ich kenne Panikattacken selbst. Und ich bin kein Therapeut.</p>
+          <p>Die Übungen in Face it kommen aus der Verhaltenstherapie: Du stellst dich in kleinen Schritten dem, was du vermeidest, und prüfst, ob das Befürchtete wirklich eintritt. Face it ersetzt keine Therapie.</p>
+          <p>In der App erkläre ich dir in kurzen Videos, warum Beruhigung die Angst füttert, was vor deiner ersten Konfrontation passiert und was du tust, wenn du absagen willst.</p>
+          <blockquote class="founder-quote">„Eins verspreche ich dir: Es wird unangenehm.“</blockquote>
+          <p class="founder-sign">Sergej, Gründer von Face it</p>
           <a href="https://apps.apple.com/de/app/face-it-dein-ki-coach/id6748347064" class="btn btn-primary btn-lg" data-cta="founder">
             <svg class="btn-apple" viewBox="0 0 384 512" aria-hidden="true"><path fill="currentColor" d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/></svg>
-            Jetzt 3 Tage gratis testen
+            Kostenlos laden
           </a>
         </div>
+
+        <figure class="vid reveal">
+          <div class="vid-frame">
+            <video controls preload="none" playsinline poster="assets/video/v1-poster.jpg" width="1280" height="720" data-video="v1_warum_du_hier_bist" aria-label="Video mit Sergej: Warum du hier bist, knapp 1 Minute">
+              <source src="videos/v1_warum_du_hier_bist.mp4" type="video/mp4" />
+            </video>
+            <button class="vid-play" type="button" hidden aria-label="Video abspielen: Warum du hier bist, knapp 1 Minute"><span class="vid-play-icon" aria-hidden="true"></span>Video ansehen · 53 Sek.</button>
+          </div>
+          <figcaption>
+            <p class="vid-title"><strong>Warum du hier bist.</strong> Das erste Video in der App, knapp 1&nbsp;Minute</p>
+            <p class="ai-note"><span class="ai-badge">Mit KI erstellt</span>Die Videos zeigen Sergej als KI-Avatar, gesprochen nach seinem Skript.</p>
+            <details class="transcript">
+              <summary>Was Sergej im Video sagt</summary>
+              <div class="transcript-body">
+                <p>Herzlich willkommen. Wenn du hier bist, dann kennst du das. Das Herz rast, dir wird schwindelig, du kriegst keine Luft. Und dann der Gedanke: Jetzt passiert was Schlimmes, ich halte das nicht aus.</p>
+                <p>Also flüchtest du. Oder du sagst ab, bleibst zu Hause, googelst deine Symptome, fragst zum dritten Mal, ob das wirklich nur Angst ist.</p>
+                <p>Und jedes Mal wird es kurz besser. Genau das ist die Falle. Dein Gehirn lernt: Ich bin nur davongekommen, weil ich geflüchtet bin. Und beim nächsten Mal kommt die Angst früher, stärker, in mehr Situationen.</p>
+                <p>Face it macht das Gegenteil. Keine Beruhigung, keine Ablenkung. Stattdessen jeden Tag eine Konfrontation, die du schaffst. Klein, aber echt. Vorher schreibst du auf, was deine größten Ängste sind. Danach schaust du nach, was wirklich passiert ist.</p>
+                <p>Ich bin Sergej, ich habe Face it gebaut. Eins verspreche ich dir: Es wird unangenehm. Und genau so fängt es an, besser zu werden und zu wirken. Los geht’s.</p>
+              </div>
+            </details>
+          </figcaption>
+        </figure>
       </div>
     </div>
   </section>
 
-  <!-- ============ SECTION 10 — SOCIAL PROOF ============ -->
-  <section class="section">
+  <!-- ============ 7 · STIMMEN ============
+       Inhalt unverändert von der alten Startseite (nur Position und Styling neu).
+       Vor Go-live vom Gründer zu bestätigen. -->
+  <section class="section section-soft" id="stimmen">
     <div class="container narrow">
       <header class="section-header center reveal">
         <h2 class="display-2">Sie haben es schon getan.</h2>
@@ -625,19 +515,19 @@
         <article class="review-card reveal">
           <span class="stars" aria-hidden="true">★★★★★</span>
           <p>„Endlich eine App, die mich nicht in Watte packt. Hat mir in einer Nacht mehr gesagt als drei Monate Therapie."</p>
-          <footer>— App Store User</footer>
+          <footer>App Store User</footer>
         </article>
 
         <article class="review-card reveal">
           <span class="stars" aria-hidden="true">★★★★★</span>
           <p>„Ich war skeptisch wegen der KI. Aber sie hat mich nach zwei Wochen besser verstanden als die meisten Menschen."</p>
-          <footer>— App Store User</footer>
+          <footer>App Store User</footer>
         </article>
 
         <article class="review-card reveal">
           <span class="stars" aria-hidden="true">★★★★★</span>
           <p>„Brutal ehrlich. Genau das was ich gebraucht habe."</p>
-          <footer>— App Store User</footer>
+          <footer>App Store User</footer>
         </article>
       </div>
 
@@ -654,273 +544,160 @@
     </div>
   </section>
 
-  <!-- ============ SECTION 11 — VERGLEICH ============ -->
-  <section class="section section-soft">
+  <!-- ============ 8 · PREIS ============ -->
+  <section class="section" id="preis">
     <div class="container">
       <header class="section-header center reveal">
-        <h2 class="display-2">Was Face it von allem anderen trennt.</h2>
+        <p class="eyebrow">Preis</p>
+        <h2 class="display-2">Was Face it kostet</h2>
+        <p class="lead section-lead">Du fängst kostenlos an und entscheidest erst danach.</p>
       </header>
 
-      <div class="compare-table-wrap reveal">
-        <table class="compare-table">
-          <thead>
-            <tr>
-              <th scope="col"></th>
-              <th scope="col">Wohlfühl-Apps</th>
-              <th scope="col">Therapie</th>
-              <th scope="col" class="th-highlight">Face it</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <th scope="row">Verfügbarkeit</th>
-              <td>24/7</td>
-              <td>1×/Woche, 50 Min</td>
-              <td class="td-highlight"><strong>24/7, sofort</strong></td>
-            </tr>
-            <tr>
-              <th scope="row">Tonfall</th>
-              <td>Sanft, validierend</td>
-              <td>Sanft (ethisch verpflichtet)</td>
-              <td class="td-highlight"><strong>Konfrontativ-ehrlich</strong></td>
-            </tr>
-            <tr>
-              <th scope="row">Erinnerung</th>
-              <td>Keine / pro Session</td>
-              <td>Begrenzt (30+ Patienten)</td>
-              <td class="td-highlight"><strong>Trackt Muster über Wochen</strong></td>
-            </tr>
-            <tr>
-              <th scope="row">Kosten</th>
-              <td>€5–15 / Monat</td>
-              <td>€80–120 / Stunde</td>
-              <td class="td-highlight"><strong>€5 / Monat</strong> (jährlich)</td>
-            </tr>
-            <tr>
-              <th scope="row">Wartezeit</th>
-              <td>Sofort</td>
-              <td>3–6 Monate</td>
-              <td class="td-highlight"><strong>Sofort</strong></td>
-            </tr>
-            <tr>
-              <th scope="row">Anonym</th>
-              <td>Pseudo-anonym</td>
-              <td>Nein</td>
-              <td class="td-highlight"><strong>Komplett anonym</strong></td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
+      <ol class="price-path reveal">
+        <li class="pp-step pp-free">
+          <span class="pp-when">Immer</span>
+          <b class="pp-title">Panikhilfe kostenlos</b>
+          <span class="pp-text">Ohne Abo und ohne Test. Auch dann, wenn du nie ein Abo abschließt.</span>
+        </li>
+        <li class="pp-step">
+          <span class="pp-when">Tag 1 und 2</span>
+          <b class="pp-title">Kostenlos</b>
+          <span class="pp-text">Deine ersten zwei Sessions, ohne Abo.</span>
+        </li>
+        <li class="pp-step">
+          <span class="pp-when">Ab Tag 3</span>
+          <b class="pp-title">3 Tage kostenlos testen</b>
+          <span class="pp-text">Der volle Plan: alle 28 Sessions und dein Coach. Danach Monats- oder Jahresabo.</span>
+        </li>
+      </ol>
 
-      <!-- Mobile stacked version (visible only on mobile) -->
-      <div class="compare-mobile reveal" aria-hidden="true">
-        <div class="compare-row">
-          <span class="compare-key">Verfügbarkeit</span>
-          <span class="compare-faceit"><strong>Face it:</strong> 24/7, sofort</span>
-          <span class="compare-rest">Therapie: 1×/Woche · Apps: 24/7</span>
-        </div>
-        <div class="compare-row">
-          <span class="compare-key">Tonfall</span>
-          <span class="compare-faceit"><strong>Face it:</strong> Konfrontativ-ehrlich</span>
-          <span class="compare-rest">Therapie: Sanft · Apps: Validierend</span>
-        </div>
-        <div class="compare-row">
-          <span class="compare-key">Erinnerung</span>
-          <span class="compare-faceit"><strong>Face it:</strong> Trackt Muster über Wochen</span>
-          <span class="compare-rest">Therapie: begrenzt · Apps: keine</span>
-        </div>
-        <div class="compare-row">
-          <span class="compare-key">Kosten</span>
-          <span class="compare-faceit"><strong>Face it:</strong> €5/Monat (jährlich)</span>
-          <span class="compare-rest">Therapie: €80–120/h · Apps: €5–15/Mon</span>
-        </div>
-        <div class="compare-row">
-          <span class="compare-key">Wartezeit</span>
-          <span class="compare-faceit"><strong>Face it:</strong> Sofort</span>
-          <span class="compare-rest">Therapie: 3–6 Monate · Apps: sofort</span>
-        </div>
-        <div class="compare-row">
-          <span class="compare-key">Anonym</span>
-          <span class="compare-faceit"><strong>Face it:</strong> Komplett anonym</span>
-          <span class="compare-rest">Therapie: nein · Apps: pseudo</span>
-        </div>
-      </div>
-
-      <p class="section-outro reveal">
-        Face it ist nicht „noch eine App". <strong>Es ist eine andere Kategorie.</strong>
-      </p>
-    </div>
-  </section>
-
-  <!-- ============ SECTION 12 — PRICING ============ -->
-  <section class="section">
-    <div class="container">
-      <header class="section-header center reveal">
-        <p class="eyebrow">Preis & Garantie</p>
-        <h2 class="display-2">Weniger als ein Kaffee pro Woche.<br />Bessere Rendite als jede Therapiestunde.</h2>
-      </header>
-
-      <div class="pricing-grid">
+      <div class="plans">
         <article class="price-card reveal">
           <header>
             <p class="plan-name">Monatlich</p>
-            <p class="plan-price"><span class="amount">€9,99</span><span class="period">/ Monat</span></p>
+            <p class="plan-price"><span class="amount">9,99&nbsp;€</span><span class="period">pro Monat</span></p>
           </header>
           <ul class="plan-features">
-            <li>3 Tage gratis testen</li>
-            <li>Vollzugriff auf alles</li>
+            <li>3 Tage kostenlos testen</li>
+            <li>Alle 28 Sessions und dein Coach</li>
             <li>Jederzeit kündbar</li>
           </ul>
-          <a href="https://apps.apple.com/de/app/face-it-dein-ki-coach/id6748347064" class="btn btn-secondary" data-cta="price-monthly">
-            <svg class="btn-apple" viewBox="0 0 384 512" aria-hidden="true"><path fill="currentColor" d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/></svg>
-            3 Tage gratis testen
-          </a>
-        </article>
-
-        <article class="price-card price-card-featured reveal">
-          <div class="featured-badge">Empfohlen · Spar 50%</div>
-          <header>
-            <p class="plan-name">Jährlich</p>
-            <p class="plan-price"><span class="amount">€59,99</span><span class="period">/ Jahr</span></p>
-            <p class="plan-equiv">= €5 / Monat</p>
-          </header>
-          <ul class="plan-features">
-            <li>3 Tage gratis testen</li>
-            <li>Vollzugriff auf alles</li>
-            <li>Jederzeit kündbar</li>
-          </ul>
-          <p class="plan-pitch">Das Equivalent von einer halben Therapiestunde — für ein ganzes Jahr Coaching.</p>
-          <a href="https://apps.apple.com/de/app/face-it-dein-ki-coach/id6748347064" class="btn btn-primary" data-cta="price-yearly">
-            <svg class="btn-apple" viewBox="0 0 384 512" aria-hidden="true"><path fill="currentColor" d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/></svg>
-            3 Tage gratis testen
-          </a>
         </article>
 
         <article class="price-card reveal">
           <header>
-            <p class="plan-name">Reality Check</p>
-            <p class="plan-price"><span class="amount">€0</span><span class="period">für immer</span></p>
+            <p class="plan-name">Jährlich</p>
+            <p class="plan-price"><span class="amount">59,99&nbsp;€</span><span class="period">pro Jahr</span></p>
+            <p class="plan-equiv">entspricht 5&nbsp;€ im Monat</p>
           </header>
           <ul class="plan-features">
-            <li>Der Panik-Knopf</li>
-            <li>Funktioniert ohne Abo</li>
-            <li>Auch ohne Trial verfügbar</li>
+            <li>3 Tage kostenlos testen</li>
+            <li>Alle 28 Sessions und dein Coach</li>
+            <li>Jederzeit kündbar</li>
           </ul>
-          <a href="https://apps.apple.com/de/app/face-it-dein-ki-coach/id6748347064" class="btn btn-secondary" data-cta="price-free">Kostenlos starten</a>
         </article>
       </div>
 
-      <div class="risk-block reveal">
-        <ul class="risk-list">
-          <li><span class="check" aria-hidden="true">✓</span> 3 Tage gratis — sieh selbst, ob's für dich passt</li>
-          <li><span class="check" aria-hidden="true">✓</span> Jederzeit kündbar — ein Tap, kein Anruf, keine Hürde</li>
-          <li><span class="check" aria-hidden="true">✓</span> Reality Check für immer kostenlos — auch wenn du das Abo nie kaufst</li>
-        </ul>
-        <p class="risk-line"><strong>Du hast nichts zu verlieren, wenn du es ausprobierst.</strong><br />
-        Dein einziges Risiko: dass dir nie jemand die Wahrheit gesagt hat — und es so weitergeht.</p>
+      <div class="price-cta reveal">
+        <a href="https://apps.apple.com/de/app/face-it-dein-ki-coach/id6748347064" class="btn btn-primary btn-lg" data-cta="price">
+          <svg class="btn-apple" viewBox="0 0 384 512" aria-hidden="true"><path fill="currentColor" d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/></svg>
+          Kostenlos laden
+        </a>
+        <p class="price-fine">Preise im deutschen App Store. Kündigst du spätestens 24 Stunden vor Ende der drei Testtage, wird nichts abgebucht. Danach verlängert sich das Abo automatisch, wenn du es nicht spätestens 24 Stunden vor Ablauf kündigst. Verwalten und kündigen kannst du es jederzeit in den Einstellungen deiner Apple-ID.</p>
       </div>
     </div>
   </section>
 
-  <!-- ============ SECTION 13 — FAQ ============ -->
-  <section class="section section-soft">
+  <!-- ============ 9 · FAQ ============ -->
+  <section class="section section-soft" id="faq">
     <div class="container narrow">
       <header class="section-header center reveal">
         <p class="eyebrow">FAQ</p>
-        <h2 class="display-2">Was Leute uns vor dem Download fragen.</h2>
+        <h2 class="display-2">Was Leute vor dem Download fragen</h2>
       </header>
 
       <div class="faq">
         <details class="faq-item reveal" open>
           <summary>
-            <span>Aber ich habe schon Headspace, Calm oder Therapie probiert. Warum sollte das hier anders sein?</span>
+            <span>Was ist die Panikhilfe?</span>
             <span class="faq-icon" aria-hidden="true"></span>
           </summary>
           <div class="faq-body">
-            <p>Genau deshalb. Wenn die sanften Lösungen funktioniert hätten, wärst du nicht hier. Face it ist explizit für den Fall gebaut, dass du das Wohlfühl-Stadium hinter dir hast und jemanden brauchst, der dich nicht mehr in Watte packt.</p>
-          </div>
-        </details>
-
-        <details class="faq-item reveal" open>
-          <summary>
-            <span>Kann eine KI wirklich verstehen, was ich durchmache?</span>
-            <span class="faq-icon" aria-hidden="true"></span>
-          </summary>
-          <div class="faq-body">
-            <p>Bessere Frage: Tut es ein Mensch, der dich 50 Minuten pro Woche sieht? Studien zeigen, dass Menschen sich KIs gegenüber ehrlicher öffnen — kein Schamgefühl, kein Urteil, keine Sorge um die Beziehung. Plus: Face it merkt sich, was du letzte Woche gesagt hast. Dein Therapeut hat 30 Patienten und kann das nicht.</p>
+            <p>Die Panikhilfe ist für den Moment, in dem die Panik da ist. Sie sagt dir zuerst das Wichtigste: nicht flüchten. Dann benennst du, was du befürchtest, zum Beispiel „Ich kippe um“, bleibst zwei Minuten und prüfst, was wirklich passiert ist. Sie ist immer kostenlos, auch ohne Abo.</p>
+            <p>Sind die Beschwerden neu oder anders als sonst, lass sie ärztlich abklären. Im Notfall wähl die <a href="tel:112">112</a>.</p>
           </div>
         </details>
 
         <details class="faq-item reveal">
           <summary>
-            <span>Was wenn es nicht reicht?</span>
+            <span>Für wen ist Face it?</span>
             <span class="faq-icon" aria-hidden="true"></span>
           </summary>
           <div class="faq-body">
-            <p>Face it ersetzt keine Therapie für klinische Diagnosen. Wenn du in einer akuten Krise bist, gehst du nicht in eine App — du rufst <strong>112</strong> oder die <strong>Telefonseelsorge (0800 111 0 111)</strong>. Face it ist für die 95 % der Zeit dazwischen, wenn du weißt, dass du wachsen willst, aber niemand da ist, der dir hilft, ehrlich mit dir zu sein.</p>
+            <p>Für Menschen mit Panikattacken und Angst, die merken, dass Vermeiden ihr Leben kleiner macht: in vollen Bahnen, im Supermarkt, bei Treffen, beim Autofahren oder in engen Räumen. Face it ist ein Selbsthilfe-Training für iPhone.</p>
+            <p>In einer akuten Krise ist eine App nicht der richtige Ort: Ruf die <a href="tel:112">112</a> oder die Telefonseelsorge an (<a href="tel:08001110111">0800 111 0 111</a>, kostenlos, rund um die Uhr).</p>
           </div>
         </details>
 
         <details class="faq-item reveal">
           <summary>
-            <span>Funktioniert das auf Android?</span>
+            <span>Ersetzt Face it eine Therapie?</span>
             <span class="faq-icon" aria-hidden="true"></span>
           </summary>
           <div class="faq-body">
-            <p>Aktuell nur iOS (iPhone + iPad). Android-Version in Arbeit.</p>
+            <p>Nein. Face it ist ein Selbsthilfe-Training und ersetzt keine Therapie. Die Übungen kommen aus der Verhaltenstherapie: Du stellst dich in kleinen Schritten dem, was du vermeidest, und prüfst, ob das Befürchtete wirklich eintritt. In der App findest du unter „Methode und Quellen“ die Leitlinien und Studien, auf denen das beruht.</p>
+            <p>Wenn deine Beschwerden anhalten oder dich stark einschränken, hol dir ärztliche oder psychotherapeutische Hilfe. Mehr dazu: <a href="/panikattacken-app/app-statt-therapie-sinnvoll/">App statt Therapie bei Angst: sinnvoll oder nicht?</a></p>
           </div>
         </details>
 
         <details class="faq-item reveal">
           <summary>
-            <span>Ist das Datenschutz-konform?</span>
+            <span>Was kostet Face it?</span>
             <span class="faq-icon" aria-hidden="true"></span>
           </summary>
           <div class="faq-body">
-            <p>Ja. Deine Gespräche sind verschlüsselt, du kannst sie jederzeit löschen, und wir verkaufen keine Daten an Dritte. Anonyme Nutzung ohne echten Namen möglich.</p>
+            <p>Die Panikhilfe ist immer kostenlos. Die ersten zwei Tage sind kostenlos, ohne Abo. Danach testest du den vollen Plan 3 Tage kostenlos. Anschließend kostet er 9,99&nbsp;€ im Monat oder 59,99&nbsp;€ im Jahr.</p>
+            <p>Kündigen kannst du jederzeit in den Einstellungen deiner Apple-ID. Kündigst du spätestens 24 Stunden vor Ende des Tests, wird nichts abgebucht.</p>
           </div>
         </details>
 
         <details class="faq-item reveal">
           <summary>
-            <span>Was, wenn ich nach den 3 Tagen merke, dass es nichts für mich ist?</span>
+            <span>Wie geht Face it mit KI und deinen Daten um?</span>
             <span class="faq-icon" aria-hidden="true"></span>
           </summary>
           <div class="faq-body">
-            <p>Du kündigst mit einem Tap in den iPhone-Einstellungen, vor Ablauf der drei Tage. Es wird nichts abgebucht. Reality Check funktioniert weiter, kostenlos, für immer.</p>
+            <p>Dein Coach im Chat ist eine KI, kein Mensch. Auch die Stufen deiner Angst-Leiter schreibt eine KI. Dafür schickt Face it Daten an OpenAI, aber nur, wenn du in der App ausdrücklich zustimmst.</p>
+            <p>Geschickt werden deine Nachrichten und Sprachnachrichten an den Coach, deine Ängste und Leitern, deine Stimmung und dein Fortschritt. Das läuft über unseren Server zu OpenAI in den USA. OpenAI nutzt diese Daten nicht, um seine KI zu trainieren. Deine Zustimmung kannst du jederzeit in den Einstellungen unter „KI-Coach“ zurücknehmen.</p>
+            <p>Ohne KI laufen Sessions, Lektionen und die Panikhilfe ganz normal. Die Videos in der App zeigen Sergej als KI-Avatar, gesprochen nach seinem Skript. Alles Weitere steht in der <a href="https://mindcom.io/privacy-policy" target="_blank" rel="noopener">Datenschutzerklärung</a>.</p>
+          </div>
+        </details>
+
+        <details class="faq-item reveal">
+          <summary>
+            <span>Gibt es Face it für Android?</span>
+            <span class="faq-icon" aria-hidden="true"></span>
+          </summary>
+          <div class="faq-body">
+            <p>Aktuell nur für iOS, also iPhone und iPad. Eine Android-Version ist in Arbeit.</p>
           </div>
         </details>
       </div>
     </div>
   </section>
 
-  <!-- ============ SECTION 14 — FINAL CTA ============ -->
+  <!-- ============ 10 · SCHLUSS-CTA ============ -->
   <section class="section section-dark section-final">
     <div class="container narrow center reveal">
-      <p class="eyebrow eyebrow-light">Du hast bis hier gelesen.</p>
-      <h2 class="display-1">
-        Das heißt: irgendwas in dem,<br />
-        was hier steht, hat dich getroffen.
-      </h2>
-
-      <div class="final-options">
-        <div class="final-option">
-          <p class="option-num">Option 1</p>
-          <p>Du schließt diesen Tab. Du machst Sonntag wie immer weiter. Du wirst diese Seite in drei Wochen vergessen haben — aber nicht das, in dem du steckst.</p>
-        </div>
-        <div class="final-option final-option-highlight">
-          <p class="option-num">Option 2</p>
-          <p>Du lädst die App runter. Drei Tage gratis. Du redest das erste Mal mit jemandem, der dir keine Ausreden durchgehen lässt. Du siehst, ob's was ändert.</p>
-        </div>
-      </div>
-
-      <p class="final-line">Du weißt selbst, was die Wahl ist, die dich weiterbringt.</p>
+      <p class="eyebrow eyebrow-light">Durchziehen statt vermeiden</p>
+      <h2 class="display-1 final-title">Du musst nicht warten, bis die Angst weg ist.</h2>
+      <p class="final-line">Fang heute mit einer kleinen Konfrontation an. 5&nbsp;bis&nbsp;10&nbsp;Minuten, so groß, wie du sie schaffst.</p>
 
       <a href="https://apps.apple.com/de/app/face-it-dein-ki-coach/id6748347064" class="btn btn-primary btn-xl" data-cta="final">
         <svg class="btn-apple" viewBox="0 0 384 512" aria-hidden="true"><path fill="currentColor" d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/></svg>
-        Jetzt 3 Tage gratis testen
+        Kostenlos laden
       </a>
-      <p class="micro micro-light">3 Tage gratis · Reality Check immer kostenlos · jederzeit kündbar</p>
+      <p class="micro micro-light">Panikhilfe immer kostenlos · die ersten zwei Tage kostenlos · Face it ersetzt keine Therapie</p>
     </div>
   </section>
 
@@ -961,11 +738,46 @@
 <div class="sticky-cta" id="stickyCta" aria-hidden="true">
   <a href="https://apps.apple.com/de/app/face-it-dein-ki-coach/id6748347064" class="btn btn-primary btn-block" data-cta="sticky">
     <svg class="btn-apple" viewBox="0 0 384 512" aria-hidden="true"><path fill="currentColor" d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/></svg>
-    3 Tage gratis testen
+    Kostenlos laden
   </a>
 </div>
 
 <script src="attribution.js" defer></script>
 <script src="script.js" defer></script>
+<script>
+  // Startseite, Videos: Ohne JS bleiben die normalen Browser-Steuerelemente.
+  // Mit JS zeigt das Poster (mit Untertitelzeile) einen eigenen Play-Knopf,
+  // die Steuerleiste kommt erst beim Abspielen dazu. Immer nur ein Video
+  // gleichzeitig; erste Wiedergabe pro Video als GA4-Event (bewusst nicht an Meta).
+  (function () {
+    document.querySelectorAll('.vid-frame').forEach(function (frame) {
+      var v = frame.querySelector('video');
+      var b = frame.querySelector('.vid-play');
+      if (!v || !b) return;
+      var start = function () {
+        v.setAttribute('controls', '');
+        b.hidden = true;
+        var p = v.play();
+        if (p && typeof p.catch === 'function') p.catch(function () {});
+      };
+      v.removeAttribute('controls');
+      b.hidden = false;
+      b.addEventListener('click', start);
+      v.addEventListener('click', function () { if (!v.hasAttribute('controls')) start(); });
+      v.addEventListener('play', function () { b.hidden = true; v.setAttribute('controls', ''); });
+    });
+
+    var vids = document.querySelectorAll('video[data-video]');
+    vids.forEach(function (v) {
+      v.addEventListener('play', function () {
+        vids.forEach(function (o) { if (o !== v && !o.paused) o.pause(); });
+        if (!v.dataset.tracked && window.gtag) {
+          v.dataset.tracked = '1';
+          window.gtag('event', 'video_play', { video: v.dataset.video });
+        }
+      });
+    });
+  })();
+</script>
 </body>
 </html>
