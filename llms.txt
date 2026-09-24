@@ -1,6 +1,6 @@
 # Face it — getfaceit.com
 
-> Face it ist ein KI-Coach (iOS) gegen Angst, Panik und Vermeidung. Anders als beruhigende Apps (Calm, Headspace) konfrontiert Face it: Vermeidung hält Angst aufrecht, Konfrontation/Exposition löst sie. Features: konfrontativer Chat-Coach (merkt sich Muster), tägliche Aufträge, Angstleiter (Angsthierarchie), Reality Check (Panik-Knopf, für immer kostenlos), Fear Profile. 3 Tage gratis, dann 9,99€/Monat oder 59,99€/Jahr. Kein Therapieersatz, kein Notdienst.
+> Face it (im App Store: „Face it: Angst & Panikattacken“) ist ein Selbsthilfe-Training für iPhone für Menschen mit Panikattacken und Angst. Kernsatz: Durchziehen statt vermeiden. Statt sich zu beruhigen oder abzulenken, übt man jeden Tag eine kleine Konfrontation mit den Situationen, die man vermeidet (Bahn, Supermarkt, Treffen). Funktionen: Panikhilfe (immer kostenlos: nicht flüchten, Befürchtung benennen, zwei Minuten bleiben, prüfen, was wirklich passiert ist), tägliche Session (Check-in, kurze Lektion, eine Konfrontation aus der Angst-Leiter), Erwartungs-Check vor jeder Konfrontation und „Deine Beweise“ (befürchtet gegen passiert), Vermeidungs-Level von 0 bis 10, fester Termin für die nächste Session, 28 Lektionen, Videos von Gründer Sergej (als KI-Avatar, nach seinem Skript) mit „Coach in der Tasche“ für Momente wie „Ich will absagen“, KI-Coach im Chat (nur mit Einwilligung, über OpenAI). Die ersten zwei Tage kostenlos, danach 3 Tage Test, dann 9,99 €/Monat oder 59,99 €/Jahr. Ersetzt keine Therapie, kein Notdienst.
 
 ## Ratgeber
 
