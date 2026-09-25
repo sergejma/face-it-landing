@@ -27,3 +27,11 @@ Regel (SEO Blueprint): Was rankt, wird nicht angefasst. Änderungen klein halten
 
 - Nächster Vergleich: **ab 28.10.2026** (6 Wochen), gleiche 3-Monats-Ansicht in der Search Console: CTR + Position der Angsthierarchie-Queries, Impressionen/Position der App-Vergleichs-Queries, Klicks auf `/apps-gegen-angst/`.
 - Nicht anfassen bis dahin: Startseiten-Title, Panik-Hub, Soforthilfe-Seiten.
+
+
+## 2026-09-25: Relaunch Startseite 3.1 und sieben Erfahrungsseiten
+
+- Startseite neu auf die 3.1-Positionierung („Panikattacken? Durchziehen statt vermeiden."), neuer Title und neue Meta-Description. Das widerspricht der Regel „Title bis 28.10. nicht anfassen"; Entscheidung des Gründers am 25.09. Die Startseite bekam bisher fast nur Markensuchen, die Messung der Hebel 1 und 2 hängt an den Ratgeber-Seiten und bleibt davon unberührt.
+- Neue Seiten (Sistrix-Recherche 24.09., `_seo/konkurrenz-keywords.md`): /invirto-erfahrungen/, /velibra-erfahrungen/, /hellobetter-panik-erfahrungen/, /mindable-erfahrungen/, /liven-app-erfahrungen/, /calm-app-panikattacken/, /rootd-app/. Alle in der Sitemap, alle verlinken auf /apps-gegen-angst/; von bestehenden Seiten wird bis 28.10. NICHT auf sie verlinkt (Messregel).
+- Erwartung: erste Impressionen für „<marke> erfahrungen" innerhalb von 4 bis 8 Wochen; größter Posten „liven app erfahrung" (2.050/Monat). Messtermin: 28.10. zusammen mit Hebel 1 und 2, dann erneut Ende November.
+- Startseite: „Android-Version in Arbeit" entfernt (es gibt keine), Bewertungszeile auf die echten Zahlen (4,6 von 5, 22 Bewertungen, Stand 24.09.), Zitat 1 auf den ersten Satz gekürzt (kein Therapie-Vergleich).
